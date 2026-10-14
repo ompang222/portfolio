@@ -16,6 +16,7 @@
 | 02 | [**K-DANCE-CHALLENGE**](02_k-dance-challenge) | 2024 · 7인 | 기획 담당(경쟁 분석·기능 정의) + 랭킹·마이페이지 구현 | HTML · CSS · JavaScript |
 | 03 | [**수업 데이터 분석**](03_class-projects) | 2024–2025 | 범죄 공공데이터 분석(3인), 타이타닉 생존율 분석 | pandas · matplotlib · Colab |
 | 04 | [**MLB 팀 기록 분석**](04_mlb-data-analysis) | 개인 | 득실차·OPS·연봉 중 무엇이 승리를 만드는지 1985–2015 팀 시즌 860개로 분석 | pandas · NumPy · matplotlib |
+| 05 | [**2026 KBO 가을야구 우승 확률**](05_kbo-2026-postseason) | 개인 | 득실점 기반 실력 + Log5 + 실제 대진으로 우승 확률 계산, 10만 회 시뮬레이션 검증 | pandas · NumPy · 몬테카를로 |
 
 ## 수상 · 활동
 
