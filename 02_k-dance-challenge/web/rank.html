@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랭킹</title>
+
+    <!-- Google Fonts에서 Bagel Fat One 폰트 불러오기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="frame">
+
+        <!-- 네비게이션 -->
+        <nav class="header">
+            <img src="../img/logo.png" alt="로고">
+            <ul>
+                <li><a href="main.html" class="neon-effect">홈</a></li>
+                <li><a href="gamerule.html" class="neon-effect">게임방법</a></li>
+                <li><a href="rank.html" class="neon-effect">랭킹</a></li>
+                <li><a href="comunity.html" class="neon-effect">커뮤니티</a></li>
+                <li><a href="mypage.html" class="neon-effect">내정보</a></li>
+            </ul>
+        </nav>
+
+        <!-- 카테고리 선택 버튼 -->
+        <div class="category-buttons">
+            <button onclick="showRanking('kpop')">K-pop Shots</button>
+            <button onclick="showRanking('challenge')">Challenge</button>
+            <button onclick="showRanking('all')">All-Time Best</button>
+        </div>
+
+        <!-- 랭킹 테이블 -->
+        <div class="ranking-container">
+            <h1>Leaderboard</h1>
+            <table id="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body">
+                    <!-- JavaScript로 플레이어 순위가 동적으로 추가될 예정 -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer"></div>
+    </div>
+
+    <script src="../js/rank.js"></script>
+</body>
+</html>

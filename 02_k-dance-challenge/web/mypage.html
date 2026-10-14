@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>내정보</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/mypage.css"> <!-- 추가된 CSS 파일 -->
+
+</head>
+<body>
+    <div class="frame">
+
+        <nav class="header">
+            <img src="../img/logo.png" alt="로고">
+            <ul>
+            <li><a href="main.html" class="neon-effect">홈</a></li>
+            <li><a href="gamerule.html" class="neon-effect">게임방법</a></li>
+            <li><a href="rank.html" class="neon-effect">랭킹</a></li>
+            <li><a href="comunity.html" class="neon-effect">커뮤니티</a></li>
+            <li><a href="mypage.html" class="neon-effect active">내정보</a></li>
+            </ul>
+        </nav>
+
+        <!-- 내정보 섹션 시작 -->
+        <div class="mypage-container">
+            <div class="profile-section">
+                <img src="../img/hachuping.png" alt="Player Avatar" class="avatar">
+                <div class="player-info">
+                    <h1>플레이어 이름: <span id="playerName">하츄핑</span></h1>
+                    <p>레벨: <span id="playerLevel">15</span></p>
+                </div>
+            </div>
+
+            <div class="stats-section">
+                <h2>플레이어 통계</h2>
+                <div class="stat">총 플레이 시간: <span id="playTime">12시간 45분</span></div>
+                <div class="stat">최고 점수: <span id="highScore">11,000점</span></div>
+                <div class="stat">랭킹: <span id="ranking">상위 1%</span></div>
+            </div>
+
+            <div class="playlist-section">
+                <h2>즐겨찾는 곡</h2>
+                <ul id="favoriteSongs">
+                    <li>나는 아픈건 딱 질색이니까</li>
+                    <li>모기송</li>
+                    <li>Supersonic</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 로그아웃 버튼 -->
+        <button class="logout-button" onclick="logout()">로그아웃</button>
+    </div>
+        <!-- 내정보 섹션 끝 -->
+
+        <div class="footer"></div>
+    </div>
+
+    <script src="../js/mypage.js"></script> <!-- 추가된 JS 파일 -->
+</body>
+</html>

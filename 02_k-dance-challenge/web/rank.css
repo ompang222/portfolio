@@ -1,0 +1,95 @@
+/* rank.html */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1b1b1b;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.category-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.category-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background: #282828;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.category-buttons button:hover {
+  background: #ff4081;
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.6);
+}
+
+table {
+  width: 80%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+table, th, td {
+  border: 1px solid #444;
+  text-align: center;
+}
+
+th {
+  background-color: #ff4081;
+  color: white;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+td {
+  background-color: #333;
+  padding: 15px;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+tr:hover {
+  background-color: #444;
+}
+
+/* 순위 숫자와 메달을 함께 정렬 */
+.rank-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* 메달과 숫자를 함께 중앙 정렬 */
+}
+
+/* 숫자와 메달 간 간격 조절 */
+.rank-number {
+  margin-left: 5px; /* 메달과 숫자 사이 간격 */
+}
+
+/* 메달 이미지 크기 조정 */
+.medal-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+  color: #ccc;
+}
+
+/* rank.html */
