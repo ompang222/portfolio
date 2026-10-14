@@ -1,0 +1,318 @@
+<title>UCL 2026-27 우승 확률</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;0,800;1,800&family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* Layout: 야간 경기장 중계 화면. 히어로는 잔디 피치(라인까지) 위에 우승 후보 시상대 → 우승 확률 보드 → 매치센터(스코어버그 카드) → 순위표 → 결장 명단 */
+:root{
+  --bg:#edf2ee; --panel:#ffffff; --panel-2:#f4f7f4; --ink:#0c1d14; --muted:#5b6d62; --line:#d5dfd8;
+  --gold:#b8860b; --gold-soft:#f5ead0; --home:#14532d; --draw:#a3b1a8; --away:#c2410c;
+  --zone-a:#15803d; --zone-b:#2563eb; --zone-c:#b4bdb7;
+  --bad:#c0262d; --warn:#b26b00; --susp:#2563eb; --live:#e11d48;
+  --pitch-1:#1f6b3f; --pitch-2:#1a5f37; --chalk:rgba(255,255,255,.75); --on-pitch:#ffffff;
+  --f-kr:"Black Han Sans","IBM Plex Sans KR",sans-serif;
+  --f-num:"Barlow Condensed","Arial Narrow",sans-serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#06100b; --panel:#0d1a13; --panel-2:#11221a; --ink:#e9f1ec; --muted:#93a89b; --line:#1f3328;
+  --gold:#f0c24f; --gold-soft:#2c2410; --home:#4ade80; --draw:#4b5d52; --away:#fb923c;
+  --zone-a:#22c55e; --zone-b:#60a5fa; --zone-c:#3a4a40;
+  --bad:#ff6b70; --warn:#f2a93b; --susp:#60a5fa; --live:#ff4d6d;
+  --pitch-1:#0f3d24; --pitch-2:#0c341f; --chalk:rgba(255,255,255,.55); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#06100b; --panel:#0d1a13; --panel-2:#11221a; --ink:#e9f1ec; --muted:#93a89b; --line:#1f3328;
+  --gold:#f0c24f; --gold-soft:#2c2410; --home:#4ade80; --draw:#4b5d52; --away:#fb923c;
+  --zone-a:#22c55e; --zone-b:#60a5fa; --zone-c:#3a4a40;
+  --bad:#ff6b70; --warn:#f2a93b; --susp:#60a5fa; --live:#ff4d6d;
+  --pitch-1:#0f3d24; --pitch-2:#0c341f; --chalk:rgba(255,255,255,.55); color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:16px;padding-block:20px 72px;display:flex;flex-direction:column;gap:48px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.crest{width:28px;height:28px;object-fit:contain;flex:none}
+.crest.lg{width:52px;height:52px}
+.crest.xl{width:76px;height:76px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+
+/* ── 히어로: 피치 ─────────────────────────────── */
+.pitch{position:relative;border-radius:10px;overflow:hidden;color:var(--on-pitch);
+  background:repeating-linear-gradient(90deg,var(--pitch-1) 0 9%,var(--pitch-2) 9% 18%);
+  padding:28px clamp(16px,4vw,48px) 30px}
+.pitch::before{content:"";position:absolute;inset:12px;border:2px solid var(--chalk);border-radius:2px;pointer-events:none;
+  background:linear-gradient(var(--chalk),var(--chalk)) center/2px 100% no-repeat}
+.pitch .circle{position:absolute;left:50%;top:50%;width:min(34vw,210px);aspect-ratio:1;transform:translate(-50%,-50%);border:2px solid var(--chalk);border-radius:50%;pointer-events:none}
+.pitch .box{position:absolute;top:28%;bottom:28%;width:9%;border:2px solid var(--chalk);pointer-events:none}
+.pitch .box.l{left:12px;border-left:0}.pitch .box.r{right:12px;border-right:0}
+.pitch .glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% -20%,rgba(255,255,255,.22),transparent 60%);pointer-events:none}
+.hero-in{position:relative;display:flex;flex-direction:column;gap:22px}
+.kicker{font-family:var(--f-num);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:14px;opacity:.85}
+.hero h1{margin:0;font-family:var(--f-kr);font-weight:400;font-size:clamp(38px,7vw,64px);line-height:1.05;text-wrap:balance;text-shadow:0 2px 0 rgba(0,0,0,.25)}
+.hero h1 .en{font-family:var(--f-num);font-style:italic;font-weight:800;letter-spacing:.01em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--f-num);font-weight:700;font-size:14px;letter-spacing:.04em;padding:3px 12px;border-radius:999px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.25)}
+.chip.live{background:var(--live);border-color:var(--live)}
+.chip.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#fff;margin-right:6px;vertical-align:1px;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.2}}
+.podium{display:grid;grid-template-columns:1fr 1.15fr 1fr;align-items:end;gap:clamp(8px,2vw,20px);max-width:640px;margin:6px auto 0;width:100%}
+.pod{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;min-width:0}
+.pod .nm{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.pod .p{font-family:var(--f-num);font-weight:800;font-style:italic;font-size:clamp(30px,5vw,44px);line-height:1}
+.pod .step{width:100%;border-radius:6px 6px 0 0;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);border-bottom:0;display:flex;align-items:flex-start;justify-content:center;padding-top:6px;font-family:var(--f-num);font-weight:800;font-size:22px}
+.pod.first .step{height:86px;background:linear-gradient(180deg,rgba(240,194,79,.55),rgba(240,194,79,.12));border-color:rgba(240,194,79,.7)}
+.pod.second .step{height:62px}.pod.third .step{height:44px}
+.hero .lede{margin:0;max-width:62ch;opacity:.92;font-size:14px}
+@media (prefers-reduced-motion:reduce){.chip.live::before{animation:none}}
+
+/* ── 섹션 공통 ───────────────────────────────── */
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:3px solid var(--ink);padding-bottom:8px}
+.sec-head h2{margin:0;font-family:var(--f-kr);font-weight:400;font-size:clamp(24px,4vw,32px);line-height:1.1}
+.sec-head .tag{font-family:var(--f-num);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--muted)}
+.sub{color:var(--muted);max-width:70ch;margin:0;font-size:14px}
+
+/* ── 우승 확률 보드 ──────────────────────────── */
+.board{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(8,auto);grid-auto-flow:column;gap:0 28px}
+.trow{display:grid;grid-template-columns:22px 28px minmax(0,1fr) 62px;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line)}
+.trow .rk{font-family:var(--f-num);font-weight:800;font-size:18px;color:var(--muted);text-align:center}
+.trow .mid{min-width:0;display:flex;flex-direction:column;gap:5px}
+.trow .nm{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;gap:8px;align-items:baseline}
+.trow .nm small{font-weight:400;color:var(--muted);font-size:12px}
+.funnel{display:grid;grid-template-columns:repeat(5,1fr);gap:3px}
+.funnel span{height:6px;border-radius:2px;background:var(--line);position:relative;overflow:hidden}
+.funnel span i{position:absolute;inset:0;background:var(--home)}
+.trow .pv{text-align:right;font-family:var(--f-num);font-weight:800;font-style:italic;font-size:26px;line-height:1}
+.trow .pv .delta{display:block;font-style:normal;font-size:12px;font-weight:700}
+.up{color:var(--zone-a)} .down{color:var(--bad)}
+.funnel-key{display:flex;gap:4px;font-size:11px;color:var(--muted);font-family:var(--f-num);letter-spacing:.06em}
+
+/* ── 매치센터 ─────────────────────────────────── */
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{font:inherit;font-family:var(--f-num);font-weight:700;font-size:15px;letter-spacing:.03em;padding:5px 14px;border-radius:4px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.tabs button:hover{border-color:var(--ink)}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tabs button:focus-visible{outline:2px solid var(--zone-b);outline-offset:2px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.card.is-live{border-color:var(--live);box-shadow:0 0 0 1px var(--live)}
+.c-top{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;background:var(--panel-2);border-bottom:1px solid var(--line);font-family:var(--f-num);font-weight:700;font-size:14px;letter-spacing:.03em;color:var(--muted)}
+.c-top .lv{color:var(--live)}
+.c-body{padding:14px;display:flex;flex-direction:column;gap:12px}
+.teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px}
+.side{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;min-width:0}
+.side .t{font-weight:700;font-size:14px;line-height:1.25;word-break:keep-all}
+.side .r{font-size:11px;color:var(--muted);font-family:var(--f-num);letter-spacing:.04em}
+.score{font-family:var(--f-num);font-weight:800;font-size:40px;line-height:1;padding:0 8px;letter-spacing:.02em}
+.vs{font-family:var(--f-num);font-weight:800;font-style:italic;font-size:22px;color:var(--muted);padding:0 10px}
+.wdl{display:flex;height:24px;border-radius:4px;overflow:hidden;font-family:var(--f-num);font-weight:700;font-size:14px}
+.wdl span{display:flex;align-items:center;justify-content:center;color:#fff;min-width:0;overflow:hidden}
+.wdl .h{background:var(--home)} .wdl .d{background:var(--draw)} .wdl .a{background:var(--away)}
+.stats{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px;align-items:baseline}
+.stats dt{color:var(--muted);font-size:12px}
+.stats dd{margin:0;display:flex;gap:10px;flex-wrap:wrap}
+.stats b{font-family:var(--f-num);font-weight:800;font-size:17px}
+.stats small{color:var(--muted)}
+.inj{font-size:12px;color:var(--warn);border-top:1px dashed var(--line);padding-top:8px}
+
+/* ── 표 ────────────────────────────────────────── */
+.scroll{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:8px 10px;text-align:right;white-space:nowrap}
+th{font-family:var(--f-num);font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--muted);border-bottom:2px solid var(--line);background:var(--panel)}
+td{border-bottom:1px solid var(--line);font-family:var(--f-num);font-size:15px;font-variant-numeric:tabular-nums}
+td.tn,th.tn{text-align:left;font-family:var(--f-body);font-size:13px}
+td.tn .tc{display:flex;align-items:center;gap:8px;font-weight:600}
+td.tn .tc .crest{width:22px;height:22px}
+td.zone{padding:0;width:4px}
+tr.z-a td.zone{background:var(--zone-a)} tr.z-b td.zone{background:var(--zone-b)} tr.z-c td.zone{background:var(--zone-c)}
+tr.cut td{border-bottom:2px solid var(--muted)}
+.heat{border-radius:3px;padding:1px 6px;display:inline-block;min-width:46px;text-align:center}
+.pill{font-family:var(--f-body);font-size:11px;font-weight:700;padding:2px 8px;border-radius:3px;color:#fff}
+.pill.out{background:var(--bad)} .pill.doubt{background:var(--warn)} .pill.suspended{background:var(--susp)}
+td a{color:var(--zone-b)}
+td.note{white-space:normal;text-align:left;font-family:var(--f-body);font-size:13px;min-width:220px}
+.zones{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.zones i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-2px}
+
+.method{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px 20px;font-size:14px}
+.method h3{font-size:15px;margin:16px 0 6px}
+.method h3:first-child{margin-top:0}
+.method ol,.method ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:78ch}
+.method a{color:var(--zone-b)}
+
+@media (max-width:760px){.board{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}}
+@media (max-width:480px){.crest.xl{width:56px;height:56px}.pod.first .step{height:64px}.pod.second .step{height:46px}.pod.third .step{height:32px}.pitch .box{display:none}.score{font-size:34px}}
+</style>
+
+<div class="wrap">
+  <header class="pitch hero">
+    <div class="glow"></div><div class="circle"></div><div class="box l"></div><div class="box r"></div>
+    <div class="hero-in">
+      <span class="kicker">UEFA Champions League · 2026-27</span>
+      <h1><span class="en">UCL</span> 우승 확률</h1>
+      <div class="podium" id="podium"></div>
+      <p class="lede" id="lede"></p>
+      <div class="chips" id="meta"></div>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><h2>누가 빅이어를 들까</h2><span class="tag">Title odds</span></div>
+    <p class="sub">팀 이름 아래 다섯 칸은 차례대로 16강 · 8강 · 4강 · 결승 · 우승까지 갈 확률입니다.</p>
+    <div class="board" id="board"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>매치센터</h2><span class="tag">Match centre</span></div>
+    <p class="sub">경기마다 이길 확률과 예상 스코어입니다. 시각은 한국 시간이고, 진행 중인 경기는 현재 스코어에서 남은 시간만 계산합니다.</p>
+    <div class="legend"><span><i style="background:var(--home)"></i>홈 승</span><span><i style="background:var(--draw)"></i>무승부</span><span><i style="background:var(--away)"></i>원정 승</span></div>
+    <div class="tabs" id="mdtabs" role="group" aria-label="라운드 선택"></div>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>리그 페이즈 예상 순위</h2><span class="tag">League phase</span></div>
+    <div class="zones"><span><i style="background:var(--zone-a)"></i>1~8위 16강 직행</span><span><i style="background:var(--zone-b)"></i>9~24위 녹아웃 플레이오프</span><span><i style="background:var(--zone-c)"></i>25위 이하 탈락</span></div>
+    <div class="scroll"><table id="league"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>결장 명단</h2><span class="tag">Injuries &amp; suspensions</span></div>
+    <p class="sub">빠지는 선수만큼 그 경기 날짜의 팀 레이팅을 낮춥니다. 출전 불투명은 절반만 반영하고, 복귀 예정일이 지나면 자동으로 빠집니다.</p>
+    <div class="scroll"><table id="inj"></table></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>방법과 한계</h2><span class="tag">Method</span></div>
+    <div class="method" id="method"></div>
+  </section>
+</div>
+
+<script>
+const D = /*__DATA__*/null;
+const N = D.names, L = D.logos || {};
+const pct = (p, d = 0) => (p * 100).toFixed(d) + '%';
+const fmtP = p => p >= 0.995 ? '>99%' : p < 0.001 ? '<0.1%' : p < 0.01 ? (p * 100).toFixed(1) + '%' : pct(p);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const crest = (c, cls = '') => L[c] ? `<img class="crest ${cls}" src="${L[c]}" alt="" width="28" height="28">` : '';
+const byCode = Object.fromEntries(D.teams.map(t => [t.code, t]));
+const live = D.cards.filter(c => c.status === 'LIVE');
+const kst = iso => {
+  if (!iso) return '';
+  const d = new Date(iso);
+  const p = Object.fromEntries(new Intl.DateTimeFormat('ko-KR', {timeZone: 'Asia/Seoul', month: 'numeric', day: 'numeric', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'}).formatToParts(d).map(x => [x.type, x.value]));
+  return `${p.month}/${p.day} (${p.weekday}) ${p.hour}:${p.minute}`;
+};
+
+// 히어로
+const [g1, g2, g3] = D.teams;
+const pod = (t, cls, n) => `<div class="pod ${cls}">${crest(t.code, 'xl')}<span class="nm">${esc(t.team)}</span><span class="p">${fmtP(t.W)}</span><div class="step">${n}</div></div>`;
+document.getElementById('podium').innerHTML = pod(g2, 'second', 2) + pod(g1, 'first', 1) + pod(g3, 'third', 3);
+document.getElementById('lede').textContent =
+  `Opta 파워 레이팅으로 팀 전력을 재고, 부상·징계를 반영해 남은 ${D.cards.length}경기와 토너먼트를 ${D.n_sim.toLocaleString()}번 시뮬레이션했습니다.`;
+document.getElementById('meta').innerHTML = [
+  `<span class="chip">갱신 ${esc(D.updated)}</span>`,
+  `<span class="chip">끝난 경기 ${D.n_done} / 144</span>`,
+  live.length ? `<span class="chip live">LIVE ${live.length}경기</span>` : ''
+].join('');
+
+// 우승 확률 보드
+const H = D.history, prev = H.length > 1 ? H[H.length - 2] : null;
+const stages = ['R16', 'QF', 'SF', 'F', 'W'];
+document.getElementById('board').innerHTML = D.teams.slice(0, 16).map((t, i) => {
+  let dl = '';
+  if (prev && prev[t.code] !== undefined) {
+    const d = t.W - parseFloat(prev[t.code]);
+    if (Math.abs(d) >= 0.003) dl = `<span class="delta ${d > 0 ? 'up' : 'down'}">${d > 0 ? '▲' : '▼'} ${Math.abs(d * 100).toFixed(1)}</span>`;
+  }
+  const fun = stages.map(s => `<span title="${s} ${fmtP(t[s])}"><i style="width:${(t[s] * 100).toFixed(1)}%"></i></span>`).join('');
+  return `<div class="trow"><span class="rk">${i + 1}</span>${crest(t.code)}
+    <div class="mid"><span class="nm">${esc(t.team)} <small>${t.pts_now}점 · ${t.played}경기</small></span><div class="funnel" aria-label="16강 ${fmtP(t.R16)}, 8강 ${fmtP(t.QF)}, 4강 ${fmtP(t.SF)}, 결승 ${fmtP(t.F)}">${fun}</div></div>
+    <span class="pv">${fmtP(t.W)}${dl}</span></div>`;
+}).join('');
+
+// 매치센터
+const mds = [...new Set(D.cards.map(c => c.md))];
+const tabs = document.getElementById('mdtabs');
+let cur = mds[0];
+try { const s = localStorage.getItem('ucl-md'); if (s && mds.includes(+s)) cur = +s; } catch (e) {}
+function drawTabs() {
+  tabs.innerHTML = mds.map(m => {
+    const any = D.cards.some(x => x.md === m && x.status === 'LIVE');
+    return `<button type="button" id="md-${m}" aria-pressed="${m === cur}" data-md="${m}">MD${m}${any ? ' · LIVE' : ''}</button>`;
+  }).join('');
+}
+const rankOf = c => { const t = byCode[c]; return t ? `현재 ${t.pts_now}점` : ''; };
+function drawCards() {
+  document.getElementById('cards').innerHTML = D.cards.filter(c => c.md === cur).map(c => {
+    const isLive = c.status === 'LIVE';
+    const w = [c.p_home, c.p_draw, c.p_away];
+    const inj = [[c.home, c.inj_home], [c.away, c.inj_away]].filter(x => x[1] > 0)
+      .map(([t, v]) => `${esc(N[t])} 결장 반영 −${v.toFixed(1)}`).join(' · ');
+    const ko = D.kickoff && D.kickoff[`${c.home}-${c.away}`];
+    return `<article class="card ${isLive ? 'is-live' : ''}">
+      <div class="c-top"><span>${ko ? kst(ko) : c.date}</span>${isLive ? `<span class="lv">● LIVE ${esc(c.minute)}'</span>` : `<span>MD${c.md}</span>`}</div>
+      <div class="c-body">
+        <div class="teams">
+          <div class="side">${crest(c.home, 'lg')}<span class="t">${esc(N[c.home])}</span><span class="r">${rankOf(c.home)}</span></div>
+          ${isLive ? `<span class="score">${esc(c.score.replace('-', ' : '))}</span>` : '<span class="vs">VS</span>'}
+          <div class="side">${crest(c.away, 'lg')}<span class="t">${esc(N[c.away])}</span><span class="r">${rankOf(c.away)}</span></div>
+        </div>
+        <div class="wdl" role="img" aria-label="홈 승 ${pct(w[0])}, 무 ${pct(w[1])}, 원정 승 ${pct(w[2])}">
+          <span class="h" style="width:${w[0] * 100}%">${w[0] > .1 ? pct(w[0]) : ''}</span>
+          <span class="d" style="width:${w[1] * 100}%">${w[1] > .1 ? pct(w[1]) : ''}</span>
+          <span class="a" style="width:${w[2] * 100}%">${w[2] > .1 ? pct(w[2]) : ''}</span></div>
+        <dl class="stats">
+          <dt>${isLive ? '예상 최종' : '예상 스코어'}</dt><dd>${c.top_scores.map(s => `<span><b>${s.s}</b> <small>${pct(s.p)}</small></span>`).join('')}</dd>
+          ${isLive ? '' : `<dt>기대 득점</dt><dd><span><b>${c.xg_home.toFixed(1)}</b> <small>:</small> <b>${c.xg_away.toFixed(1)}</b></span></dd>`}
+        </dl>
+        ${inj ? `<div class="inj">${inj}</div>` : ''}
+      </div>
+    </article>`;
+  }).join('');
+}
+tabs.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  cur = +b.dataset.md; try { localStorage.setItem('ucl-md', cur); } catch (e) {}
+  drawTabs(); drawCards();
+});
+drawTabs(); drawCards();
+
+// 순위표
+const heat = p => `background:color-mix(in srgb, var(--home) ${Math.round(p * 75)}%, transparent);color:${p > .55 ? 'var(--panel)' : 'var(--ink)'}`;
+const lg = [...D.teams].sort((a, b) => b.exp_pts - a.exp_pts);
+const cols = [['top8', '1~8위'], ['playoff', '9~24위'], ['out', '탈락'], ['R16', '16강'], ['QF', '8강'], ['SF', '4강'], ['F', '결승'], ['W', '우승']];
+document.getElementById('league').innerHTML = `<thead><tr><th></th><th>#</th><th class="tn">팀</th><th>레이팅</th><th>경기</th><th>승점</th><th>예상 승점</th>${cols.map(c => `<th>${c[1]}</th>`).join('')}</tr></thead><tbody>` +
+  lg.map((t, i) => `<tr class="${i < 8 ? 'z-a' : i < 24 ? 'z-b' : 'z-c'} ${i === 7 || i === 23 ? 'cut' : ''}"><td class="zone"></td><td>${i + 1}</td>
+    <td class="tn"><span class="tc">${crest(t.code)}${esc(t.team)}</span></td><td>${t.rating.toFixed(1)}</td><td>${t.played}</td><td><b>${t.pts_now}</b></td><td>${t.exp_pts.toFixed(1)}</td>` +
+    cols.map(([k]) => `<td><span class="heat" style="${heat(t[k])}">${fmtP(t[k])}</span></td>`).join('') + '</tr>').join('') + '</tbody>';
+
+// 결장 명단
+const stLabel = {out: '결장', doubt: '불투명', suspended: '징계'};
+const today = D.updated.slice(0, 10);
+document.getElementById('inj').innerHTML = `<thead><tr><th class="tn">팀</th><th class="tn">선수</th><th class="tn">상태</th><th>반영</th><th>예상 복귀</th><th class="tn">내용</th><th class="tn">출처</th></tr></thead><tbody>` +
+  D.injuries.filter(r => r.until > today).sort((a, b) => a.team.localeCompare(b.team) || b.impact - a.impact).map(r =>
+    `<tr><td class="tn"><span class="tc">${crest(r.team)}${esc(N[r.team])}</span></td><td class="tn">${esc(r.player)}</td><td class="tn"><span class="pill ${r.status}">${stLabel[r.status]}</span></td>
+     <td>−${(r.impact * (r.status === 'doubt' ? .5 : 1)).toFixed(2)}</td><td>${r.until.slice(5).replace('-', '/')}</td><td class="note">${esc(r.note)}</td>
+     <td class="tn"><a href="${esc(r.source)}" target="_blank" rel="noopener">기사</a></td></tr>`).join('') + '</tbody>';
+
+document.getElementById('method').innerHTML = `
+<h3>계산 순서</h3>
+<ol>
+<li><b>팀 전력</b>: Opta 파워 레이팅(전 세계 클럽 0~100점, 매일 갱신)을 씁니다.</li>
+<li><b>결장자 반영</b>: 핵심 선수가 빠지면 그 경기 날짜에 한해 레이팅을 깎습니다(주전급 0.4~0.8점, 불투명은 절반).</li>
+<li><b>경기 예측</b>: 레이팅 차이로 두 팀의 기대 득점을 정하고, 포아송 분포로 스코어별 확률을 계산합니다. 계수는 Opta가 공개한 2차전 경기별 승률 26개에 맞췄습니다(레이팅 1점당 로그 득점비 ${D.beta.toFixed(3)}, 홈 이점 ${D.home.toFixed(3)}, Opta 승률과의 평균 오차 ${(D.opta_rmse * 100).toFixed(1)}%p).</li>
+<li><b>시즌 시뮬레이션</b>: 남은 리그 경기와 플레이오프·16강·8강·4강(홈 앤드 어웨이, 동률이면 연장·승부차기), 단판 결승을 ${D.n_sim.toLocaleString()}번 돌립니다. 시즌 중 전력 변화는 시뮬레이션마다 팀 레이팅을 ±1.5점 흔들어 반영합니다.</li>
+</ol>
+<h3>한계</h3>
+<ul>
+<li>올 시즌 실제 결과만으로 추정하면 계수가 ${D.beta_results.toFixed(3)}로 더 크게 나옵니다(강팀이 더 유리). 아직 ${D.n_done}경기라 표본이 작아 참고만 합니다.</li>
+<li>결장 영향 점수는 기사 내용을 보고 정한 가정값입니다. Opta 레이팅에 최근 결과가 이미 반영돼 있어 일부 중복될 수 있습니다.</li>
+<li>토너먼트 대진은 리그 순위에 따른 시드 구조를 따르고, 같은 시드 쌍 안의 추첨은 무작위로 처리했습니다. 동률 순위는 승점·득실차·다득점·승수까지만 봅니다.</li>
+<li>토너먼트(2~5월)의 부상은 아직 알 수 없어 반영하지 않습니다.</li>
+</ul>
+<h3>데이터</h3>
+<ul>
+<li>레이팅: <a href="https://theanalyst.com/" target="_blank" rel="noopener">Opta Analyst 파워 랭킹</a> · 결과·진행 중 스코어·킥오프·엠블럼: ESPN · 일정: UEFA / Wikipedia · 부상: Sports Mole 등 기사(결장 명단의 링크)</li>
+</ul>`;
+</script>
