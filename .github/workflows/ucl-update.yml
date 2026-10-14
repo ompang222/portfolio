@@ -1,0 +1,59 @@
+# 06_ucl-2026-27 대시보드를 GitHub 서버에서 자동 갱신합니다.
+# 경기 중에는 매 실행마다 스코어 반영·재시뮬레이션, 그 밖에는 6시간마다 전체 갱신(레이팅·상대전적·날씨).
+# 부상 정보(data/injuries.csv)는 기사를 읽고 사람이 고칩니다.
+name: UCL 대시보드 갱신
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'live 또는 full'
+        default: 'full'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ucl-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 06_ucl-2026-27
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 이번에 할 일 정하기
+        id: mode
+        run: |
+          if [ -n "${{ github.event.inputs.mode }}" ]; then m="${{ github.event.inputs.mode }}"; else m=$(python3 live_check.py); fi
+          echo "mode=$m" >> "$GITHUB_OUTPUT"; echo "mode: $m"
+
+      - uses: actions/setup-python@v5
+        if: steps.mode.outputs.mode != 'skip'
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: 06_ucl-2026-27/requirements.txt
+
+      - name: 갱신
+        if: steps.mode.outputs.mode != 'skip'
+        run: |
+          pip install -q -r requirements.txt
+          if [ "${{ steps.mode.outputs.mode }}" = "full" ]; then sh update.sh full; else sh update.sh; fi
+
+      - name: 커밋 · push
+        if: steps.mode.outputs.mode != 'skip'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A .
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -q -m "UCL 대시보드 자동 갱신 ($(TZ=Asia/Seoul date '+%m-%d %H:%M') KST, ${{ steps.mode.outputs.mode }})"
+          git pull -q --rebase -X theirs origin main || { git rebase --abort; exit 1; }
+          git push -q origin HEAD:main

@@ -77,6 +77,68 @@ def lambdas(rh, ra, neutral=False):
     h = 0 if neutral else HOME
     return np.exp(MU + h + BETA*(rh-ra)/2), np.exp(MU - h - BETA*(rh-ra)/2)
 
+# ── 1-2. 경기별 외부 요인 (data/factors.json, data/team_home_adv.csv) ──────────
+# 모두 로그 득점 단위의 작은 보정. 팀별 홈 이점과 상대전적은 데이터로 크기를 정하고,
+# 이동 거리·휴식일·날씨는 효과가 작다고 알려진 요인이라 가정값을 작게 둡니다.
+TRAVEL_PER_1000KM = 0.01   # 원정팀 1000km 이동당 득점 −1% (4000km에서 상한)
+REST_PER_DAY = 0.015       # 직전 경기 후 4일 미만이면, 하루 모자랄 때마다 자기 득점 −1.5%, 상대 득점 +1.5%
+WET, WINDY = 0.04, 0.04    # 시간당 2mm 이상 비 / 시속 35km 이상 바람 → 양 팀 득점 각 −4%
+H2H_K = 20                 # 상대전적 축소 강도: 5경기여도 가중치는 5/(5+20)=20%
+H2H_HALF_LIFE = 3          # 3년 지난 맞대결은 반만 반영
+GOALS_PER_TEAM = 1.42      # 자국 리그 1만 1천여 경기 팀당 평균 득점 (home_advantage.py)
+
+FACT = json.loads((ROOT/'data/factors.json').read_text(encoding='utf-8'))['matches'] if (ROOT/'data/factors.json').exists() else {}
+THA = {r['code']: float(r['adj_log']) for r in csv.DictReader(open(ROOT/'data/team_home_adv.csv', encoding='utf-8'))} \
+    if (ROOT/'data/team_home_adv.csv').exists() else {}
+
+def h2h_delta(h, a, meetings, ref_date):
+    """최근 맞대결에서 (지금 레이팅으로 기대한 것보다) 얼마나 더 잘했나 → 축소한 로그 득점비."""
+    if not meetings:
+        return 0.0, 0.0
+    ref = dt.date.fromisoformat(ref_date); num = den = 0.0
+    for g in meetings:
+        w = 0.5 ** ((ref - dt.date.fromisoformat(g['date'])).days / 365.25 / H2H_HALF_LIFE)
+        if g['home'] == h:
+            lh, la = lambdas(BASE[IDX[h]], BASE[IDX[a]], neutral=g['neutral']); act = g['hg'] - g['ag']
+        else:
+            la, lh = lambdas(BASE[IDX[a]], BASE[IDX[h]], neutral=g['neutral']); act = g['ag'] - g['hg']
+        num += w * (act - (lh - la)); den += w
+    resid = num / den
+    return float(np.clip(den / (den + H2H_K) * resid / GOALS_PER_TEAM, -0.1, 0.1)), resid
+
+def factor_terms(m):
+    """요인별 (홈 로그 득점 보정, 원정 로그 득점 보정, 설명)."""
+    h, a = m['home'], m['away']; F = FACT.get(f'{h}-{a}', {}); out = {}
+    if F.get('neutral'):
+        out['venue'] = (-HOME, HOME, f"중립 경기장 ({F['venue']['city']}) · 홈 이점 없음")
+    else:
+        x = (THA.get(h, 0) + THA.get(a, 0)) / 2
+        out['venue'] = (x, -x, f"팀별 홈 이점 보정 {x*100:+.1f}%")
+    if F.get('dist_km') and not F.get('neutral'):
+        d = -TRAVEL_PER_1000KM * min(F['dist_km'], 4000) / 1000
+        out['travel'] = (0.0, d, f"원정 이동 {F['dist_km']:,}km")
+    rh, ra = F.get('rest_home'), F.get('rest_away')
+    if rh is not None and ra is not None:
+        sh = REST_PER_DAY * max(0, 4 - rh); sa = REST_PER_DAY * max(0, 4 - ra)
+        out['rest'] = (-sh + sa, -sa + sh, f"휴식 {rh:.0f}일 : {ra:.0f}일")
+    w = F.get('weather')
+    if w:
+        mult = (1 - WET if w['precip'] >= 2 else 1) * (1 - WINDY if w['wind'] >= 35 else 1)
+        out['weather'] = (np.log(mult), np.log(mult), f"{w['temp']:.0f}°C · 강수 {w['precip']:.1f}mm · 바람 {w['wind']:.0f}km/h")
+    if F.get('h2h'):
+        d, resid = h2h_delta(h, a, F['h2h'], m['date'])
+        rec = [g['hg'] - g['ag'] if g['home'] == h else g['ag'] - g['hg'] for g in F['h2h']]
+        wdl = f"{sum(r > 0 for r in rec)}승 {sum(r == 0 for r in rec)}무 {sum(r < 0 for r in rec)}패"
+        out['h2h'] = (d/2, -d/2, f"최근 {len(rec)}경기 {wdl} (홈팀 기준)")
+    return out
+
+def match_lambdas(m, rh, ra, skip=()):
+    lh, la = lambdas(rh, ra)
+    for k, (dh, da, _) in factor_terms(m).items():
+        if k not in skip:
+            lh, la = lh * np.exp(dh), la * np.exp(da)
+    return lh, la
+
 def score_grid(lh, la, add_h=0, add_a=0):
     g = np.arange(MAX_G)
     M = np.outer(poisson.pmf(g, lh), poisson.pmf(g, la))
@@ -85,12 +147,26 @@ def score_grid(lh, la, add_h=0, add_a=0):
 def match_card(m):
     date = m['date']; h, a = m['home'], m['away']
     rh, ra = eff(h, date), eff(a, date)
-    lh, la = lambdas(rh, ra)
+    lh, la = match_lambdas(m, rh, ra)
+    lh0, la0 = lh, la                              # 경기 전 기대 득점 (페이지에서 실시간 재계산에 씀)
     add_h = add_a = 0
     if m['status'] == 'LIVE':                      # 진행 중: 남은 시간만큼만 추가 득점
         f = max(0, 90 - int(m['minute'] or 0)) / 90
         lh, la = lh*f, la*f; add_h, add_a = int(m['hg']), int(m['ag'])
     M, _, _ = score_grid(lh, la)
+
+    # 요인별 영향: 그 요인 하나만 빼고 계산했을 때와 비교한 홈 승·원정 승 확률 차이 (경기 전 기준)
+    H0, A0 = _probs(lh0, la0)
+    terms = factor_terms(m); fx = []
+    inj_h, inj_a = injury_penalty(h, date), injury_penalty(a, date)
+    if inj_h or inj_a:
+        Hx, Ax = _probs(*match_lambdas(m, BASE[IDX[h]], BASE[IDX[a]]))
+        fx.append(dict(k='injury', d_home=float(H0 - Hx), d_away=float(A0 - Ax),
+                       text=f"결장 반영 {KO[h]} −{inj_h:.1f} · {KO[a]} −{inj_a:.1f}"))
+    for k, (_, _, text) in terms.items():
+        Hx, Ax = _probs(*match_lambdas(m, rh, ra, skip=(k,)))
+        fx.append(dict(k=k, d_home=float(H0 - Hx), d_away=float(A0 - Ax), text=text))
+    F = FACT.get(f'{h}-{a}', {})
     idx = np.argsort(M, axis=None)[::-1][:3]
     tops = [(int(i//MAX_G)+add_h, int(i % MAX_G)+add_a, float(M.flat[i])) for i in idx]
     gh, ga = np.indices(M.shape); gh = gh + add_h; ga = ga + add_a
@@ -99,7 +175,9 @@ def match_card(m):
                 p_home=float(M[gh > ga].sum()), p_draw=float(M[gh == ga].sum()), p_away=float(M[gh < ga].sum()),
                 xg_home=float(lh + add_h), xg_away=float(la + add_a),
                 top_scores=[dict(s=f'{x}-{y}', p=p) for x, y, p in tops],
-                inj_home=injury_penalty(h, date), inj_away=injury_penalty(a, date))
+                inj_home=inj_h, inj_away=inj_a, lam_home=float(lh0), lam_away=float(la0),
+                factors=fx, h2h=F.get('h2h', []), venue=(F.get('venue') or {}).get('name'),
+                event=F.get('event'))
 
 # ── 2. 시즌 시뮬레이션 ─────────────────────────────────────────────────
 rng = np.random.default_rng(int(sys.argv[1]) if len(sys.argv) > 1 else 2027)
@@ -118,7 +196,7 @@ for m in matches:
         x = np.full(N_SIM, int(m['hg'])); y = np.full(N_SIM, int(m['ag']))
     else:
         rh = eff(m['home'], m['date']) + form[:, i]; ra = eff(m['away'], m['date']) + form[:, j]
-        lh, la = lambdas(rh, ra)
+        lh, la = match_lambdas(m, rh, ra)
         if m['status'] == 'LIVE':
             f = max(0, 90 - int(m['minute'] or 0)) / 90
             x = int(m['hg']) + rng.poisson(lh*f); y = int(m['ag']) + rng.poisson(la*f)

@@ -49,7 +49,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);fo
 .hero h1 .en{font-family:var(--f-num);font-style:italic;font-weight:800;letter-spacing:.01em}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font-family:var(--f-num);font-weight:700;font-size:14px;letter-spacing:.04em;padding:3px 12px;border-radius:999px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.25)}
-.chip.live{background:var(--live);border-color:var(--live)}
+.chip.live{background:var(--live);border-color:var(--live);color:#fff}
 .chip.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#fff;margin-right:6px;vertical-align:1px;animation:pulse 1.4s infinite}
 @keyframes pulse{50%{opacity:.2}}
 .podium{display:grid;grid-template-columns:1fr 1.15fr 1fr;align-items:end;gap:clamp(8px,2vw,20px);max-width:640px;margin:6px auto 0;width:100%}
@@ -114,6 +114,28 @@ section{display:flex;flex-direction:column;gap:16px}
 .stats small{color:var(--muted)}
 .inj{font-size:12px;color:var(--warn);border-top:1px dashed var(--line);padding-top:8px}
 
+.card.is-ft{opacity:.92}
+.c-top .ft{color:var(--muted)}
+.ev{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;font-size:12px}
+.ev li{display:flex;gap:6px;align-items:center}
+.ev li.a{justify-content:flex-end;text-align:right}
+.ev .m{font-family:var(--f-num);font-weight:700;color:var(--muted)}
+.ev .rc{display:inline-block;width:8px;height:11px;background:var(--bad);border-radius:1px}
+.fac{width:100%;border-collapse:collapse;font-size:12px}
+.fac caption{text-align:left;font-weight:700;font-size:12px;padding-bottom:4px}
+.fac caption small{font-weight:400;color:var(--muted)}
+.fac th{font-family:var(--f-body);font-weight:500;color:var(--muted);text-align:left;padding:3px 8px 3px 0;border:0;background:none;letter-spacing:0;white-space:nowrap;font-size:12px}
+.fac td{border:0;border-top:1px dashed var(--line);padding:3px 0;font-family:var(--f-body);font-size:12px}
+.fac tr:first-of-type td,.fac tr:first-of-type th{border-top:0}
+.fac td.tx{text-align:left;white-space:normal;color:var(--ink)}
+.fac td.fx{text-align:right;font-family:var(--f-num);font-weight:800;font-size:14px;padding-left:8px}
+.fx.pos{color:var(--zone-a)} .fx.neg{color:var(--bad)} .fx.z{color:var(--muted)}
+.h2h{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:12px;border-top:1px dashed var(--line);padding-top:8px}
+.h2h .lbl{color:var(--muted);width:100%}
+.h2h .g{display:inline-flex;align-items:center;gap:3px}
+.h2h .g .crest{width:16px;height:16px}
+.h2h .g b{font-family:var(--f-num);font-size:14px}
+.h2h .g small{color:var(--muted);margin-left:2px}
 /* ── 표 ────────────────────────────────────────── */
 .scroll{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px}
 table{border-collapse:collapse;width:100%;font-size:13px}
@@ -152,7 +174,7 @@ td.note{white-space:normal;text-align:left;font-family:var(--f-body);font-size:1
       <h1><span class="en">UCL</span> 우승 확률</h1>
       <div class="podium" id="podium"></div>
       <p class="lede" id="lede"></p>
-      <div class="chips" id="meta"></div>
+      <div class="chips"><span id="meta" class="chips"></span><span class="chip live" id="livechip" hidden></span></div>
     </div>
   </header>
 
@@ -232,7 +254,9 @@ document.getElementById('board').innerHTML = D.teams.slice(0, 16).map((t, i) => 
 }).join('');
 
 // 매치센터
-const mds = [...new Set(D.cards.map(c => c.md))];
+const FLABEL = {injury: '결장', venue: '경기장', travel: '이동', rest: '휴식', weather: '날씨', h2h: '상대전적'};
+const id2code = Object.fromEntries(Object.entries(D.espn_id || {}).map(([k, v]) => [v, k]));
+const mds = [...new Set(D.cards.map(c => c.md))].sort((a, b) => a - b);
 const tabs = document.getElementById('mdtabs');
 let cur = mds[0];
 try { const s = localStorage.getItem('ucl-md'); if (s && mds.includes(+s)) cur = +s; } catch (e) {}
@@ -243,33 +267,77 @@ function drawTabs() {
   }).join('');
 }
 const rankOf = c => { const t = byCode[c]; return t ? `현재 ${t.pts_now}점` : ''; };
-function drawCards() {
-  document.getElementById('cards').innerHTML = D.cards.filter(c => c.md === cur).map(c => {
-    const isLive = c.status === 'LIVE';
-    const w = [c.p_home, c.p_draw, c.p_away];
-    const inj = [[c.home, c.inj_home], [c.away, c.inj_away]].filter(x => x[1] > 0)
-      .map(([t, v]) => `${esc(N[t])} 결장 반영 −${v.toFixed(1)}`).join(' · ');
-    const ko = D.kickoff && D.kickoff[`${c.home}-${c.away}`];
-    return `<article class="card ${isLive ? 'is-live' : ''}">
-      <div class="c-top"><span>${ko ? kst(ko) : c.date}</span>${isLive ? `<span class="lv">● LIVE ${esc(c.minute)}'</span>` : `<span>MD${c.md}</span>`}</div>
-      <div class="c-body">
-        <div class="teams">
-          <div class="side">${crest(c.home, 'lg')}<span class="t">${esc(N[c.home])}</span><span class="r">${rankOf(c.home)}</span></div>
-          ${isLive ? `<span class="score">${esc(c.score.replace('-', ' : '))}</span>` : '<span class="vs">VS</span>'}
-          <div class="side">${crest(c.away, 'lg')}<span class="t">${esc(N[c.away])}</span><span class="r">${rankOf(c.away)}</span></div>
-        </div>
-        <div class="wdl" role="img" aria-label="홈 승 ${pct(w[0])}, 무 ${pct(w[1])}, 원정 승 ${pct(w[2])}">
-          <span class="h" style="width:${w[0] * 100}%">${w[0] > .1 ? pct(w[0]) : ''}</span>
-          <span class="d" style="width:${w[1] * 100}%">${w[1] > .1 ? pct(w[1]) : ''}</span>
-          <span class="a" style="width:${w[2] * 100}%">${w[2] > .1 ? pct(w[2]) : ''}</span></div>
-        <dl class="stats">
-          <dt>${isLive ? '예상 최종' : '예상 스코어'}</dt><dd>${c.top_scores.map(s => `<span><b>${s.s}</b> <small>${pct(s.p)}</small></span>`).join('')}</dd>
-          ${isLive ? '' : `<dt>기대 득점</dt><dd><span><b>${c.xg_home.toFixed(1)}</b> <small>:</small> <b>${c.xg_away.toFixed(1)}</b></span></dd>`}
-        </dl>
-        ${inj ? `<div class="inj">${inj}</div>` : ''}
-      </div>
-    </article>`;
+const pp = v => `${v >= 0 ? '+' : '−'}${Math.abs(v * 100).toFixed(1)}`;
+
+// 포아송: 남은 시간 동안의 추가 득점으로 진행 중 경기 확률을 브라우저에서 다시 계산
+function pois(l) { const out = []; let p = Math.exp(-l); for (let k = 0; k < 11; k++) { out.push(p); p *= l / (k + 1); } return out; }
+function liveCalc(c) {
+  const f = Math.max(0, 90 - (parseInt(c.minute) || 0)) / 90;
+  const ph = pois(c.lam_home * f), pa = pois(c.lam_away * f);
+  const [h0, a0] = c.score.split('-').map(Number);
+  let H = 0, Dr = 0, A = 0; const cells = [];
+  ph.forEach((x, i) => pa.forEach((y, j) => {
+    const p = x * y, gh = h0 + i, ga = a0 + j;
+    if (gh > ga) H += p; else if (gh === ga) Dr += p; else A += p;
+    cells.push([p, `${gh}-${ga}`]);
+  }));
+  const tot = H + Dr + A;
+  c.p_home = H / tot; c.p_draw = Dr / tot; c.p_away = A / tot;
+  c.top_scores = cells.sort((x, y) => y[0] - x[0]).slice(0, 3).map(([p, s]) => ({s, p: p / tot}));
+}
+function eventsHtml(c) {
+  if (!c.events || !c.events.length) return '';
+  return `<ul class="ev">${c.events.map(e => `<li class="${e.side}"><span class="m">${esc(e.clock)}</span>${e.red ? '<i class="rc" aria-label="퇴장"></i>' : '⚽'} ${esc(e.who)}${e.note ? ` <small>${esc(e.note)}</small>` : ''}</li>`).join('')}</ul>`;
+}
+function h2hHtml(c) {
+  if (!c.h2h || !c.h2h.length) return '';
+  return `<div class="h2h"><span class="lbl">최근 맞대결</span>${c.h2h.map(g =>
+    `<span class="g" title="${g.date}">${crest(g.home)}<b>${g.hg}-${g.ag}</b>${crest(g.away)}<small>${g.date.slice(2, 7).replace('-', '.')}</small></span>`).join('')}</div>`;
+}
+function factorHtml(c) {
+  if (!c.factors || !c.factors.length) return '';
+  const rows = c.factors.map(f => {
+    const v = f.d_home, cls = Math.abs(v) < 0.002 ? 'z' : v > 0 ? 'pos' : 'neg';
+    return `<tr><th>${FLABEL[f.k] || f.k}</th><td class="tx">${esc(f.text)}</td><td class="fx ${cls}">${pp(v)}</td></tr>`;
   }).join('');
+  return `<table class="fac"><caption>요인별 영향 <small>홈 승 확률 %p</small></caption>${rows}</table>`;
+}
+function card(c) {
+  const isLive = c.status === 'LIVE', isFT = c.status === 'FT';
+  if (isLive) liveCalc(c);
+  const w = [c.p_home, c.p_draw, c.p_away];
+  const ko = D.kickoff && D.kickoff[`${c.home}-${c.away}`];
+  const right = isLive ? `<span class="lv">● LIVE ${esc(c.minute)}'</span>` : isFT ? '<span class="ft">종료</span>' : `<span>${esc(c.venue || 'MD' + c.md)}</span>`;
+  const mid = (isLive || isFT) ? `<span class="score">${esc(c.score.replace('-', ' : '))}</span>` : '<span class="vs">VS</span>';
+  const probs = isFT ? '' : `<div class="wdl" role="img" aria-label="홈 승 ${pct(w[0])}, 무 ${pct(w[1])}, 원정 승 ${pct(w[2])}">
+        <span class="h" style="width:${w[0] * 100}%">${w[0] > .1 ? pct(w[0]) : ''}</span>
+        <span class="d" style="width:${w[1] * 100}%">${w[1] > .1 ? pct(w[1]) : ''}</span>
+        <span class="a" style="width:${w[2] * 100}%">${w[2] > .1 ? pct(w[2]) : ''}</span></div>
+      <dl class="stats">
+        <dt>${isLive ? '예상 최종' : '예상 스코어'}</dt><dd>${c.top_scores.map(s => `<span><b>${s.s}</b> <small>${pct(s.p)}</small></span>`).join('')}</dd>
+        ${isLive ? '' : `<dt>기대 득점</dt><dd><span><b>${c.xg_home.toFixed(1)}</b> <small>:</small> <b>${c.xg_away.toFixed(1)}</b></span></dd>`}
+      </dl>`;
+  return `<article class="card ${isLive ? 'is-live' : ''} ${isFT ? 'is-ft' : ''}">
+    <div class="c-top"><span>${ko ? kst(ko) : c.date}</span>${right}</div>
+    <div class="c-body">
+      <div class="teams">
+        <div class="side">${crest(c.home, 'lg')}<span class="t">${esc(N[c.home])}</span><span class="r">${rankOf(c.home)}</span></div>
+        ${mid}
+        <div class="side">${crest(c.away, 'lg')}<span class="t">${esc(N[c.away])}</span><span class="r">${rankOf(c.away)}</span></div>
+      </div>
+      ${eventsHtml(c)}
+      ${probs}
+      ${isLive || isFT ? '' : factorHtml(c)}
+      ${isLive || isFT ? '' : h2hHtml(c)}
+    </div>
+  </article>`;
+}
+function drawCards() {
+  const done = D.results.filter(r => r.md === cur && !D.cards.some(c => c.home === r.home && c.away === r.away))
+    .map(r => ({...r, status: 'FT'}));
+  const list = [...D.cards.filter(c => c.md === cur), ...done];
+  const order = c => (c.status === 'LIVE' ? 0 : c.status === 'FT' ? 2 : 1) * 1e13 + Date.parse((D.kickoff || {})[`${c.home}-${c.away}`] || c.date);
+  document.getElementById('cards').innerHTML = list.sort((x, y) => order(x) - order(y)).map(card).join('');
 }
 tabs.addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
@@ -277,6 +345,51 @@ tabs.addEventListener('click', e => {
   drawTabs(); drawCards();
 });
 drawTabs(); drawCards();
+
+// 실시간: 경기 시작 20분 전부터 끝날 때까지 30초마다 ESPN 스코어보드를 읽어 스코어·시간·골·퇴장을 갱신
+// (claude.ai 미리보기에서는 외부 요청이 막혀 있어 서버 갱신 때만 바뀝니다)
+const liveChip = document.getElementById('livechip');
+let liveOff = false;
+function windowDates() {
+  const now = Date.now(), ds = new Set();
+  D.cards.forEach(c => {
+    const t = Date.parse((D.kickoff || {})[`${c.home}-${c.away}`] || '');
+    if (t && now > t - 20 * 60e3 && now < t + 3 * 3600e3) ds.add(new Date(t).toISOString().slice(0, 10).replace(/-/g, ''));
+  });
+  return [...ds];
+}
+function clockOf(comp) { return String(comp.status.displayClock || '0').split("'")[0]; }
+async function poll() {
+  if (liveOff) return;
+  const ds = windowDates();
+  if (!ds.length) { liveChip.hidden = true; setTimeout(poll, 60e3); return; }
+  try {
+    for (const d of ds) {
+      const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=${d}`, {cache: 'no-store'});
+      const j = await r.json();
+      for (const e of j.events || []) {
+        const comp = e.competitions[0], st = comp.status.type;
+        const side = Object.fromEntries(comp.competitors.map(x => [x.homeAway, x]));
+        const h = id2code[side.home.team.id], a = id2code[side.away.team.id];
+        const c = D.cards.find(x => x.home === h && x.away === a);
+        if (!c || st.state === 'pre') continue;
+        c.status = st.state === 'post' ? 'FT' : 'LIVE';
+        c.minute = clockOf(comp);
+        c.score = `${side.home.score}-${side.away.score}`;
+        c.events = (comp.details || []).filter(x => x.scoringPlay || x.redCard).map(x => ({
+          clock: x.clock ? x.clock.displayValue : '', red: !!x.redCard,
+          side: x.team && x.team.id === side.home.team.id ? 'h' : 'a',
+          who: (x.athletesInvolved && x.athletesInvolved[0] && x.athletesInvolved[0].displayName) || '',
+          note: x.penaltyKick ? 'PK' : x.ownGoal ? '자책골' : ''}));
+      }
+    }
+    liveChip.hidden = false;
+    liveChip.textContent = '실시간 ' + new Intl.DateTimeFormat('ko-KR', {timeZone: 'Asia/Seoul', hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23'}).format(new Date());
+    drawTabs(); drawCards();
+    setTimeout(poll, 30e3);
+  } catch (err) { liveOff = true; liveChip.hidden = true; }
+}
+poll();
 
 // 순위표
 const heat = p => `background:color-mix(in srgb, var(--home) ${Math.round(p * 75)}%, transparent);color:${p > .55 ? 'var(--panel)' : 'var(--ink)'}`;
@@ -304,6 +417,21 @@ document.getElementById('method').innerHTML = `
 <li><b>경기 예측</b>: 레이팅 차이로 두 팀의 기대 득점을 정하고, 포아송 분포로 스코어별 확률을 계산합니다. 계수는 Opta가 공개한 2차전 경기별 승률 26개에 맞췄습니다(레이팅 1점당 로그 득점비 ${D.beta.toFixed(3)}, 홈 이점 ${D.home.toFixed(3)}, Opta 승률과의 평균 오차 ${(D.opta_rmse * 100).toFixed(1)}%p).</li>
 <li><b>시즌 시뮬레이션</b>: 남은 리그 경기와 플레이오프·16강·8강·4강(홈 앤드 어웨이, 동률이면 연장·승부차기), 단판 결승을 ${D.n_sim.toLocaleString()}번 돌립니다. 시즌 중 전력 변화는 시뮬레이션마다 팀 레이팅을 ±1.5점 흔들어 반영합니다.</li>
 </ol>
+<h3>경기별 외부 요인</h3>
+<ul>
+<li><b>팀별 홈 이점</b>: 자국 리그 ${D.home_adv_meta ? D.home_adv_meta.games.toLocaleString() : ''}경기로 팀마다 홈·원정 득실차 차이를 쟀습니다. 그런데 한 시즌 홈에 강했던 팀이 다음 시즌에도 강한지 보면 상관이 ${D.home_adv_meta ? 'r = ' + D.home_adv_meta.r : '거의 0'}이라, 팀별 홈 이점은 대부분 우연이었습니다. 그래서 모든 팀에 공통 홈 이점을 주고, 팀별 차이는 재현성만큼(1% 안팎)만 더합니다.</li>
+<li><b>중립 경기장</b>: 자국에서 홈경기를 못 치르는 팀(샤흐타르)은 홈 이점을 0으로 둡니다.</li>
+<li><b>상대전적</b>: 최근 맞대결 5경기에서 지금 전력으로 기대한 것보다 얼마나 더 잘했는지 봅니다. 맞대결은 표본이 작아 5경기여도 20%만 반영하고, 3년 지난 경기는 절반만 셉니다.</li>
+<li><b>이동 거리</b>: 원정팀 연고지에서 경기장까지 1000km당 원정팀 득점 −1% (4000km에서 상한).</li>
+<li><b>휴식일</b>: 직전 경기 후 4일 미만이면 하루 모자랄 때마다 자기 득점 −1.5%, 상대 득점 +1.5%.</li>
+<li><b>날씨</b>: 킥오프 시각 예보가 시간당 2mm 이상 비나 시속 35km 이상 바람이면 양 팀 득점을 4%씩 낮춥니다(승패보다 스코어에 영향).</li>
+<li>이동·휴식·날씨의 크기는 효과가 작다고 알려진 요인이라 작게 정한 가정값입니다. 경기 카드의 '요인별 영향'은 그 요인 하나만 뺐을 때와 비교한 홈 승 확률 차이입니다.</li>
+</ul>
+<h3>실시간 갱신</h3>
+<ul>
+<li>GitHub 페이지는 경기 시작 20분 전부터 30초마다 ESPN 스코어를 직접 읽어 스코어·경기 시간·골·퇴장과 그 경기의 승률을 바로 고칩니다.</li>
+<li>우승 확률 같은 전체 시뮬레이션은 서버에서 다시 계산해 몇 분 간격으로 반영됩니다.</li>
+</ul>
 <h3>한계</h3>
 <ul>
 <li>올 시즌 실제 결과만으로 추정하면 계수가 ${D.beta_results.toFixed(3)}로 더 크게 나옵니다(강팀이 더 유리). 아직 ${D.n_done}경기라 표본이 작아 참고만 합니다.</li>

@@ -9,6 +9,10 @@ data['logos'] = {p.stem: 'data:image/png;base64,' + base64.b64encode(p.read_byte
                  for p in sorted((ROOT/'data/logos').glob('*.png'))}
 data['kickoff'] = {f"{r['home']}-{r['away']}": r['kickoff_utc']
                    for r in csv.DictReader(open(ROOT/'data/kickoffs.csv', encoding='utf-8'))}
+fac = ROOT/'data/factors.json'
+data['espn_id'] = json.loads(fac.read_text(encoding='utf-8'))['espn_id'] if fac.exists() else {}
+meta = ROOT/'data/team_home_adv_meta.json'
+data['home_adv_meta'] = json.loads(meta.read_text(encoding='utf-8')) if meta.exists() else None
 payload = json.dumps(data, ensure_ascii=False).replace('</', '<\\/')
 html = (ROOT/'dashboard_template.html').read_text(encoding='utf-8').replace('/*__DATA__*/null', payload)
 

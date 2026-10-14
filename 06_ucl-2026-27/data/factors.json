@@ -1,0 +1,4479 @@
+{
+ "matches": {
+  "AEK-LAS": {
+   "event": "401915452",
+   "venue": {
+    "name": "OPAP Arena",
+    "city": "Athens",
+    "country": "Greece"
+   },
+   "h2h": [],
+   "dist_km": 1378,
+   "neutral": false,
+   "coords": [
+    37.98376,
+    23.72784
+   ]
+  },
+  "BRU-AVL": {
+   "event": "401915426",
+   "venue": {
+    "name": "Jan Breydel Stadium",
+    "city": "Brugge",
+    "country": "Belgium"
+   },
+   "h2h": [
+    {
+     "date": "2025-03-12",
+     "home": "AVL",
+     "away": "BRU",
+     "hg": 3,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2025-03-04",
+     "home": "BRU",
+     "away": "AVL",
+     "hg": 1,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2024-11-06",
+     "home": "BRU",
+     "away": "AVL",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 379,
+   "neutral": false,
+   "coords": [
+    51.20892,
+    3.22424
+   ]
+  },
+  "BVB-VIL": {
+   "event": "401915449",
+   "venue": {
+    "name": "Signal Iduna Park",
+    "city": "Aue",
+    "country": "Germany"
+   },
+   "h2h": [
+    {
+     "date": "2025-11-25",
+     "home": "BVB",
+     "away": "VIL",
+     "hg": 4,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2024-08-06",
+     "home": "BVB",
+     "away": "VIL",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2022-07-22",
+     "home": "BVB",
+     "away": "VIL",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2044,
+   "neutral": false,
+   "coords": [
+    50.59034,
+    12.70657
+   ]
+  },
+  "POR-MCI": {
+   "event": "401915425",
+   "venue": {
+    "name": "Estádio do Dragão",
+    "city": "Porto",
+    "country": "Portugal"
+   },
+   "h2h": [
+    {
+     "date": "2020-12-01",
+     "home": "POR",
+     "away": "MCI",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2020-10-21",
+     "home": "MCI",
+     "away": "POR",
+     "hg": 3,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2012-02-22",
+     "home": "MCI",
+     "away": "POR",
+     "hg": 4,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2012-02-16",
+     "home": "POR",
+     "away": "MCI",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1452,
+   "neutral": false,
+   "coords": [
+    41.1485,
+    -8.61097
+   ]
+  },
+  "LIL-BET": {
+   "event": "401915450",
+   "venue": {
+    "name": "Decathlon Arena - Stade Pierre-Mauroy",
+    "city": "Lille",
+    "country": "France"
+   },
+   "h2h": [],
+   "dist_km": 1638,
+   "neutral": false,
+   "coords": [
+    50.63391,
+    3.05512
+   ]
+  },
+  "RMA-INT": {
+   "event": "401915451",
+   "venue": {
+    "name": "Santiago Bernabéu",
+    "city": "Madrid",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2021-12-07",
+     "home": "RMA",
+     "away": "INT",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2021-09-15",
+     "home": "INT",
+     "away": "RMA",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2020-11-25",
+     "home": "INT",
+     "away": "RMA",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2020-11-03",
+     "home": "RMA",
+     "away": "INT",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2015-07-27",
+     "home": "INT",
+     "away": "RMA",
+     "hg": 0,
+     "ag": 3,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1378,
+   "neutral": false,
+   "coords": [
+    40.4165,
+    -3.70256
+   ]
+  },
+  "BAR-FEY": {
+   "event": "401915424",
+   "venue": {
+    "name": "Spotify Camp Nou",
+    "city": "Barcelona",
+    "country": "Spain"
+   },
+   "h2h": [],
+   "dist_km": 1184,
+   "neutral": false,
+   "coords": [
+    41.38879,
+    2.15899
+   ]
+  },
+  "STU-VIK": {
+   "event": "401915448",
+   "venue": {
+    "name": "MHPArena",
+    "city": "Stuttgart",
+    "country": "Germany"
+   },
+   "h2h": [],
+   "dist_km": 1155,
+   "neutral": false,
+   "coords": [
+    48.78232,
+    9.17702
+   ]
+  },
+  "LIV-ATM": {
+   "event": "401915446",
+   "venue": {
+    "name": "Anfield",
+    "city": "Liverpool",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2025-09-17",
+     "home": "LIV",
+     "away": "ATM",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2021-11-03",
+     "home": "LIV",
+     "away": "ATM",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2021-10-19",
+     "home": "ATM",
+     "away": "LIV",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2020-03-11",
+     "home": "LIV",
+     "away": "ATM",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2020-02-18",
+     "home": "ATM",
+     "away": "LIV",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1446,
+   "neutral": false,
+   "coords": [
+    53.41058,
+    -2.97794
+   ]
+  },
+  "NAP-ARS": {
+   "event": "401915423",
+   "venue": {
+    "name": "Stadio Diego Armando Maradona",
+    "city": "Napoli",
+    "country": "Italy"
+   },
+   "h2h": [
+    {
+     "date": "2019-04-18",
+     "home": "NAP",
+     "away": "ARS",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2019-04-11",
+     "home": "ARS",
+     "away": "NAP",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2013-12-11",
+     "home": "NAP",
+     "away": "ARS",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2013-10-01",
+     "home": "ARS",
+     "away": "NAP",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 4499,
+   "neutral": false,
+   "coords": [
+    13.18333,
+    -16.18333
+   ]
+  },
+  "PSG-SLO": {
+   "event": "401915445",
+   "venue": {
+    "name": "Parc des Princes",
+    "city": "Paris",
+    "country": "France"
+   },
+   "h2h": [
+    {
+     "date": "2011-11-03",
+     "home": "PSG",
+     "away": "SLO",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2011-10-20",
+     "home": "SLO",
+     "away": "PSG",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1088,
+   "neutral": false,
+   "coords": [
+    48.85341,
+    2.3488
+   ]
+  },
+  "SCP-GAL": {
+   "event": "401915447",
+   "venue": {
+    "name": "Estádio José Alvalade",
+    "city": "Lisbon",
+    "country": "Portugal"
+   },
+   "h2h": [],
+   "dist_km": 3236,
+   "neutral": false,
+   "coords": [
+    38.72509,
+    -9.1498
+   ]
+  },
+  "FEN-ROM": {
+   "event": "401915444",
+   "venue": {
+    "name": "Şükrü Saracoğlu Stadium",
+    "city": "Istanbul",
+    "country": "Türkiye"
+   },
+   "h2h": [],
+   "dist_km": 781,
+   "neutral": false,
+   "coords": [
+    41.01384,
+    28.94966
+   ]
+  },
+  "PSV-SHA": {
+   "event": "401915422",
+   "venue": {
+    "name": "Philips Stadion",
+    "city": "Eindhoven",
+    "country": "Netherlands"
+   },
+   "h2h": [
+    {
+     "date": "2024-11-27",
+     "home": "PSV",
+     "away": "SHA",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 388,
+   "neutral": false,
+   "coords": [
+    51.44083,
+    5.47778
+   ]
+  },
+  "BAY-BOD": {
+   "event": "401915443",
+   "venue": {
+    "name": "Allianz Arena",
+    "city": "München",
+    "country": "Germany"
+   },
+   "h2h": [],
+   "dist_km": null,
+   "neutral": false,
+   "coords": [
+    48.13743,
+    11.57549
+   ]
+  },
+  "COM-RBL": {
+   "event": "401915441",
+   "venue": {
+    "name": "Giuseppe Sinigaglia",
+    "city": "Como",
+    "country": "Italy"
+   },
+   "h2h": [],
+   "dist_km": 661,
+   "neutral": false,
+   "coords": [
+    45.80819,
+    9.0832
+   ]
+  },
+  "MUN-SAB": {
+   "event": "401915442",
+   "venue": {
+    "name": "Old Trafford",
+    "city": "Manchester",
+    "country": "England"
+   },
+   "h2h": [],
+   "dist_km": 4111,
+   "neutral": false,
+   "coords": [
+    53.48095,
+    -2.23743
+   ]
+  },
+  "SLA-RCL": {
+   "event": "401915440",
+   "venue": {
+    "name": "Fortuna Arena",
+    "city": "Prague",
+    "country": "Czechia"
+   },
+   "h2h": [],
+   "dist_km": 824,
+   "neutral": false,
+   "coords": [
+    50.08804,
+    14.42076
+   ]
+  },
+  "RCL-SCP": {
+   "event": "401915418",
+   "venue": {
+    "name": "Stade Bollaert-Delelis",
+    "city": "Lens",
+    "country": "France"
+   },
+   "h2h": [],
+   "dist_km": 1607,
+   "neutral": false,
+   "coords": [
+    50.43302,
+    2.82791
+   ]
+  },
+  "SAB-SLA": {
+   "event": "401915436",
+   "venue": {
+    "name": "Baku Olympic Stadium",
+    "city": "Baku",
+    "country": "Azerbaijan"
+   },
+   "h2h": [],
+   "dist_km": 2946,
+   "neutral": false,
+   "coords": [
+    40.37767,
+    49.89201
+   ]
+  },
+  "ARS-LIL": {
+   "event": "401915417",
+   "venue": {
+    "name": "Emirates Stadium",
+    "city": "London",
+    "country": "England"
+   },
+   "h2h": [],
+   "dist_km": 243,
+   "neutral": false,
+   "coords": [
+    51.50853,
+    -0.12574
+   ]
+  },
+  "ATM-MUN": {
+   "event": "401915412",
+   "venue": {
+    "name": "Riyadh Air Metropolitano",
+    "city": "Madrid",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2026-08-01",
+     "home": "MUN",
+     "away": "ATM",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2022-07-30",
+     "home": "ATM",
+     "away": "MUN",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2022-03-15",
+     "home": "MUN",
+     "away": "ATM",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2022-02-23",
+     "home": "ATM",
+     "away": "MUN",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1457,
+   "neutral": false,
+   "coords": [
+    40.4165,
+    -3.70256
+   ]
+  },
+  "GAL-BAR": {
+   "event": "401915435",
+   "venue": {
+    "name": "RAMS Park",
+    "city": "Istanbul",
+    "country": "Türkiye"
+   },
+   "h2h": [
+    {
+     "date": "2022-03-17",
+     "home": "GAL",
+     "away": "BAR",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2022-03-10",
+     "home": "BAR",
+     "away": "GAL",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2002-11-13",
+     "home": "BAR",
+     "away": "GAL",
+     "hg": 3,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2002-09-24",
+     "home": "GAL",
+     "away": "BAR",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2002-03-19",
+     "home": "GAL",
+     "away": "BAR",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2233,
+   "neutral": false,
+   "coords": [
+    41.01384,
+    28.94966
+   ]
+  },
+  "INT-BRU": {
+   "event": "401915413",
+   "venue": {
+    "name": "San Siro",
+    "city": "Milano",
+    "country": "Italy"
+   },
+   "h2h": [],
+   "dist_km": 1174,
+   "neutral": false,
+   "coords": [
+    42.78235,
+    12.59836
+   ]
+  },
+  "RBL-PSV": {
+   "event": "401915434",
+   "venue": {
+    "name": "Red Bull Arena",
+    "city": "Leipzig",
+    "country": "Germany"
+   },
+   "h2h": [],
+   "dist_km": 478,
+   "neutral": false,
+   "coords": [
+    51.33962,
+    12.37129
+   ]
+  },
+  "VIK-BAY": {
+   "event": "401915411",
+   "venue": {
+    "name": "Viking Stadion",
+    "city": "Stavanger",
+    "country": "Norway"
+   },
+   "h2h": [],
+   "dist_km": 1264,
+   "neutral": false,
+   "coords": [
+    58.97005,
+    5.73332
+   ]
+  },
+  "VIL-NAP": {
+   "event": "401915410",
+   "venue": {
+    "name": "Estadio de la Cerámica",
+    "city": "Villarreal",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2022-12-17",
+     "home": "NAP",
+     "away": "VIL",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2016-02-25",
+     "home": "NAP",
+     "away": "VIL",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2016-02-18",
+     "home": "VIL",
+     "away": "NAP",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2011-12-07",
+     "home": "VIL",
+     "away": "NAP",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2011-09-27",
+     "home": "NAP",
+     "away": "VIL",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2974,
+   "neutral": false,
+   "coords": [
+    38.72572,
+    -7.21533
+   ]
+  },
+  "FEY-COM": {
+   "event": "401915416",
+   "venue": {
+    "name": "De Kuip",
+    "city": "Rotterdam",
+    "country": "Netherlands"
+   },
+   "h2h": [],
+   "dist_km": 758,
+   "neutral": false,
+   "coords": [
+    51.9225,
+    4.47917
+   ]
+  },
+  "LAS-LIV": {
+   "event": "401915415",
+   "venue": {
+    "name": "Raiffeisen Arena (Linz)",
+    "city": "Linz",
+    "country": "Austria"
+   },
+   "h2h": [
+    {
+     "date": "2023-11-30",
+     "home": "LIV",
+     "away": "LAS",
+     "hg": 4,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2023-09-21",
+     "home": "LAS",
+     "away": "LIV",
+     "hg": 1,
+     "ag": 3,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1334,
+   "neutral": false,
+   "coords": [
+    48.30639,
+    14.28611
+   ]
+  },
+  "ROM-RMA": {
+   "event": "401915414",
+   "venue": {
+    "name": "Olimpico",
+    "city": "Roma",
+    "country": "Italy"
+   },
+   "h2h": [
+    {
+     "date": "2019-08-11",
+     "home": "ROM",
+     "away": "RMA",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2018-11-27",
+     "home": "ROM",
+     "away": "RMA",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2018-09-19",
+     "home": "RMA",
+     "away": "ROM",
+     "hg": 3,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2018-08-08",
+     "home": "RMA",
+     "away": "ROM",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2016-03-08",
+     "home": "RMA",
+     "away": "ROM",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2536,
+   "neutral": false,
+   "coords": [
+    47.83333,
+    26.6
+   ],
+   "rest_home": 3.4,
+   "rest_away": 4.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 3.2,
+    "temp": 6.9,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "AVL-FEN": {
+   "event": "401915409",
+   "venue": {
+    "name": "Villa Park",
+    "city": "Birmingham",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2026-01-22",
+     "home": "FEN",
+     "away": "AVL",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2645,
+   "neutral": false,
+   "coords": [
+    52.48142,
+    -1.89983
+   ],
+   "rest_home": 4.2,
+   "rest_away": 4.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 23.8,
+    "temp": 15.1,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "BOD-BVB": {
+   "event": "401915393",
+   "venue": {
+    "name": "Aspmyra Stadion",
+    "city": "Bodø/Glimt",
+    "country": "Norway"
+   },
+   "h2h": [
+    {
+     "date": "2025-12-10",
+     "home": "BVB",
+     "away": "BOD",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": null,
+   "neutral": false,
+   "coords": null,
+   "rest_home": 4.2,
+   "rest_away": 5.0
+  },
+  "MCI-PSG": {
+   "event": "401915407",
+   "venue": {
+    "name": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2025-01-22",
+     "home": "PSG",
+     "away": "MCI",
+     "hg": 4,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2021-11-24",
+     "home": "MCI",
+     "away": "PSG",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2021-09-28",
+     "home": "PSG",
+     "away": "MCI",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2021-05-04",
+     "home": "MCI",
+     "away": "PSG",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2021-04-28",
+     "home": "PSG",
+     "away": "MCI",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 606,
+   "neutral": false,
+   "coords": [
+    53.48095,
+    -2.23743
+   ],
+   "rest_home": 3.1,
+   "rest_away": 4.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 19.4,
+    "temp": 15.4,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "BET-POR": {
+   "event": "401915408",
+   "venue": {
+    "name": "Estadio La Cartuja",
+    "city": "Sevilla",
+    "country": "Spain"
+   },
+   "h2h": [],
+   "dist_km": 476,
+   "neutral": false,
+   "coords": [
+    37.38283,
+    -5.97317
+   ],
+   "rest_home": 3.1,
+   "rest_away": 4.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 5.5,
+    "temp": 28.2,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "SHA-AEK": {
+   "event": "401915406",
+   "venue": {
+    "name": "Stamford Bridge",
+    "city": "London",
+    "country": "England"
+   },
+   "h2h": [],
+   "dist_km": 2392,
+   "neutral": true,
+   "coords": [
+    51.50853,
+    -0.12574
+   ],
+   "rest_home": 12.3,
+   "rest_away": 4.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 14.8,
+    "temp": 16.3,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "SLO-STU": {
+   "event": "401915405",
+   "venue": {
+    "name": "Národny Futbalovy Stadión",
+    "city": "Bratislava",
+    "country": "Slovakia"
+   },
+   "h2h": [
+    {
+     "date": "2025-01-21",
+     "home": "SLO",
+     "away": "STU",
+     "hg": 1,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2010-08-26",
+     "home": "STU",
+     "away": "SLO",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2010-08-19",
+     "home": "SLO",
+     "away": "STU",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 589,
+   "neutral": false,
+   "coords": [
+    48.14816,
+    17.10674
+   ],
+   "rest_home": 35.0,
+   "rest_away": 4.2,
+   "weather": {
+    "precip": 0.0,
+    "wind": 4.6,
+    "temp": 11.6,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "FEN-SLA": {
+   "event": "401915403",
+   "venue": {
+    "name": "Şükrü Saracoğlu Stadium",
+    "city": "Istanbul",
+    "country": "Türkiye"
+   },
+   "h2h": [
+    {
+     "date": "2024-11-28",
+     "home": "SLA",
+     "away": "FEN",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2022-02-24",
+     "home": "SLA",
+     "away": "FEN",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2022-02-17",
+     "home": "FEN",
+     "away": "SLA",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1511,
+   "neutral": false,
+   "coords": [
+    41.01384,
+    28.94966
+   ],
+   "rest_home": 3.0,
+   "rest_away": 7.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 11.0,
+    "temp": 17.3,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "SAB-BVB": {
+   "event": "401915404",
+   "venue": {
+    "name": "Baku Olympic Stadium",
+    "city": "Baku",
+    "country": "Azerbaijan"
+   },
+   "h2h": [],
+   "dist_km": 3074,
+   "neutral": false,
+   "coords": [
+    40.37767,
+    49.89201
+   ],
+   "rest_home": 7.0,
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 11.0,
+    "temp": 17.0,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "ROM-SLO": {
+   "event": "401915402",
+   "venue": {
+    "name": "Olimpico",
+    "city": "Roma",
+    "country": "Italy"
+   },
+   "h2h": [
+    {
+     "date": "2011-08-25",
+     "home": "ROM",
+     "away": "SLO",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2011-08-18",
+     "home": "SLO",
+     "away": "ROM",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 707,
+   "neutral": false,
+   "coords": [
+    47.83333,
+    26.6
+   ],
+   "rest_home": 3.0,
+   "rest_away": 6.0,
+   "weather": {
+    "precip": 0.2,
+    "wind": 3.6,
+    "temp": 12.8,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "POR-PSV": {
+   "event": "401915398",
+   "venue": {
+    "name": "Estádio do Dragão",
+    "city": "Porto",
+    "country": "Portugal"
+   },
+   "h2h": [
+    {
+     "date": "2016-07-21",
+     "home": "PSV",
+     "away": "POR",
+     "hg": 3,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1570,
+   "neutral": false,
+   "coords": [
+    41.1485,
+    -8.61097
+   ],
+   "rest_home": 6.0,
+   "rest_away": 3.2,
+   "weather": {
+    "precip": 0.2,
+    "wind": 12.1,
+    "temp": 14.9,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "LIV-VIL": {
+   "event": "401915397",
+   "venue": {
+    "name": "Anfield",
+    "city": "Liverpool",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2022-05-03",
+     "home": "VIL",
+     "away": "LIV",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2022-04-27",
+     "home": "LIV",
+     "away": "VIL",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2016-05-05",
+     "home": "LIV",
+     "away": "VIL",
+     "hg": 3,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2016-04-28",
+     "home": "VIL",
+     "away": "LIV",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1665,
+   "neutral": false,
+   "coords": [
+    53.41058,
+    -2.97794
+   ],
+   "rest_home": 3.2,
+   "rest_away": 3.2,
+   "weather": {
+    "precip": 0.0,
+    "wind": 13.0,
+    "temp": 11.2,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "MCI-AEK": {
+   "event": "401915401",
+   "venue": {
+    "name": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England"
+   },
+   "h2h": [],
+   "dist_km": 2625,
+   "neutral": false,
+   "coords": [
+    53.48095,
+    -2.23743
+   ],
+   "rest_home": 3.2,
+   "rest_away": 6.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 10.1,
+    "temp": 11.1,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "NAP-BOD": {
+   "event": "401915400",
+   "venue": {
+    "name": "Stadio Diego Armando Maradona",
+    "city": "Napoli",
+    "country": "Italy"
+   },
+   "h2h": [],
+   "dist_km": null,
+   "neutral": false,
+   "coords": [
+    13.18333,
+    -16.18333
+   ],
+   "rest_home": 3.2,
+   "rest_away": 3.3,
+   "weather": {
+    "precip": 0.4,
+    "wind": 4.6,
+    "temp": 24.2,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "PSG-BAR": {
+   "event": "401915399",
+   "venue": {
+    "name": "Parc des Princes",
+    "city": "Paris",
+    "country": "France"
+   },
+   "h2h": [
+    {
+     "date": "2025-10-01",
+     "home": "BAR",
+     "away": "PSG",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2024-04-16",
+     "home": "BAR",
+     "away": "PSG",
+     "hg": 1,
+     "ag": 4,
+     "neutral": false
+    },
+    {
+     "date": "2024-04-10",
+     "home": "PSG",
+     "away": "BAR",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2021-03-10",
+     "home": "PSG",
+     "away": "BAR",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2021-02-16",
+     "home": "BAR",
+     "away": "PSG",
+     "hg": 1,
+     "ag": 4,
+     "neutral": false
+    }
+   ],
+   "dist_km": 830,
+   "neutral": false,
+   "coords": [
+    48.85341,
+    2.3488
+   ],
+   "rest_home": 3.2,
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 3.4,
+    "temp": 13.3,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "STU-ATM": {
+   "event": "401915392",
+   "venue": {
+    "name": "MHPArena",
+    "city": "Stuttgart",
+    "country": "Germany"
+   },
+   "h2h": [
+    {
+     "date": "2018-08-05",
+     "home": "STU",
+     "away": "ATM",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1377,
+   "neutral": false,
+   "coords": [
+    48.78232,
+    9.17702
+   ],
+   "rest_home": 3.2,
+   "rest_away": 3.3,
+   "weather": {
+    "precip": 0.0,
+    "wind": 1.1,
+    "temp": 9.1,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "COM-MUN": {
+   "event": "401915395",
+   "venue": {
+    "name": "Giuseppe Sinigaglia",
+    "city": "Como",
+    "country": "Italy"
+   },
+   "h2h": [],
+   "dist_km": 1177,
+   "neutral": false,
+   "coords": [
+    45.80819,
+    9.0832
+   ],
+   "rest_home": 3.2,
+   "rest_away": 3.2,
+   "weather": {
+    "precip": 0.0,
+    "wind": 3.6,
+    "temp": 17.8,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "LIL-GAL": {
+   "event": "401915396",
+   "venue": {
+    "name": "Decathlon Arena - Stade Pierre-Mauroy",
+    "city": "Lille",
+    "country": "France"
+   },
+   "h2h": [],
+   "dist_km": 2257,
+   "neutral": false,
+   "coords": [
+    50.63391,
+    3.05512
+   ],
+   "rest_home": 3.9,
+   "rest_away": 4.2,
+   "weather": {
+    "precip": 0.0,
+    "wind": 19.4,
+    "temp": 15.5,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "AVL-VIK": {
+   "event": "401915394",
+   "venue": {
+    "name": "Villa Park",
+    "city": "Birmingham",
+    "country": "England"
+   },
+   "h2h": [],
+   "dist_km": 864,
+   "neutral": false,
+   "coords": [
+    52.48142,
+    -1.89983
+   ],
+   "rest_home": 4.1,
+   "rest_away": 4.1,
+   "weather": {
+    "precip": 0.7,
+    "wind": 17.8,
+    "temp": 10.6,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "BAY-ARS": {
+   "event": "401915312",
+   "venue": {
+    "name": "Allianz Arena",
+    "city": "München",
+    "country": "Germany"
+   },
+   "h2h": [
+    {
+     "date": "2025-11-26",
+     "home": "ARS",
+     "away": "BAY",
+     "hg": 3,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2024-04-17",
+     "home": "BAY",
+     "away": "ARS",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2024-04-09",
+     "home": "ARS",
+     "away": "BAY",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2019-07-18",
+     "home": "ARS",
+     "away": "BAY",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2017-07-19",
+     "home": "BAY",
+     "away": "ARS",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 918,
+   "neutral": false,
+   "coords": [
+    48.13743,
+    11.57549
+   ],
+   "rest_home": 4.1,
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 3.4,
+    "temp": 10.0,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "BRU-RCL": {
+   "event": "401915388",
+   "venue": {
+    "name": "Jan Breydel Stadium",
+    "city": "Brugge",
+    "country": "Belgium"
+   },
+   "h2h": [],
+   "dist_km": 91,
+   "neutral": false,
+   "coords": [
+    51.20892,
+    3.22424
+   ],
+   "rest_home": 8.0,
+   "rest_away": 4.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 21.4,
+    "temp": 14.1,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "INT-SHA": {
+   "event": "401915390",
+   "venue": {
+    "name": "San Siro",
+    "city": "Milano",
+    "country": "Italy"
+   },
+   "h2h": [
+    {
+     "date": "2021-11-24",
+     "home": "INT",
+     "away": "SHA",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2021-09-28",
+     "home": "SHA",
+     "away": "INT",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2020-12-09",
+     "home": "INT",
+     "away": "SHA",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2020-10-27",
+     "home": "SHA",
+     "away": "INT",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2020-08-17",
+     "home": "INT",
+     "away": "SHA",
+     "hg": 5,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1363,
+   "neutral": false,
+   "coords": [
+    42.78235,
+    12.59836
+   ],
+   "rest_home": 4.1,
+   "rest_away": 7.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 5.0,
+    "temp": 14.1,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "BET-FEY": {
+   "event": "401915389",
+   "venue": {
+    "name": "Estadio La Cartuja",
+    "city": "Sevilla",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2026-01-29",
+     "home": "BET",
+     "away": "FEY",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1812,
+   "neutral": false,
+   "coords": [
+    37.38283,
+    -5.97317
+   ],
+   "rest_home": 4.1,
+   "rest_away": 4.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 10.4,
+    "temp": 19.0,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "RMA-RBL": {
+   "event": "401915313",
+   "venue": {
+    "name": "Santiago Bernabéu",
+    "city": "Madrid",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2024-03-06",
+     "home": "RMA",
+     "away": "RBL",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2024-02-13",
+     "home": "RBL",
+     "away": "RMA",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2022-10-25",
+     "home": "RBL",
+     "away": "RMA",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2022-09-14",
+     "home": "RMA",
+     "away": "RBL",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1732,
+   "neutral": false,
+   "coords": [
+    40.4165,
+    -3.70256
+   ],
+   "rest_home": 3.0,
+   "rest_away": 4.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 10.5,
+    "temp": 14.7,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "SCP-LAS": {
+   "event": "401915391",
+   "venue": {
+    "name": "Estádio José Alvalade",
+    "city": "Lisbon",
+    "country": "Portugal"
+   },
+   "h2h": [
+    {
+     "date": "2020-10-01",
+     "home": "SCP",
+     "away": "LAS",
+     "hg": 1,
+     "ag": 4,
+     "neutral": false
+    },
+    {
+     "date": "2019-12-12",
+     "home": "LAS",
+     "away": "SCP",
+     "hg": 3,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2019-10-03",
+     "home": "SCP",
+     "away": "LAS",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2157,
+   "neutral": false,
+   "coords": [
+    38.72509,
+    -9.1498
+   ],
+   "rest_home": 8.1,
+   "rest_away": 4.2,
+   "weather": {
+    "precip": 0.0,
+    "wind": 11.2,
+    "temp": 15.5,
+    "fetched": "2026-10-14 20:43"
+   }
+  },
+  "GAL-STU": {
+   "event": "401915311",
+   "venue": {
+    "name": "RAMS Park",
+    "city": "Istanbul",
+    "country": "Türkiye"
+   },
+   "h2h": [],
+   "dist_km": 1773,
+   "neutral": false,
+   "coords": [
+    41.01384,
+    28.94966
+   ],
+   "rest_home": 4.0,
+   "rest_away": 3.1
+  },
+  "SHA-SCP": {
+   "event": "401915310",
+   "venue": {
+    "name": "Stamford Bridge",
+    "city": "London",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2008-11-04",
+     "home": "SCP",
+     "away": "SHA",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2008-10-22",
+     "home": "SHA",
+     "away": "SCP",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1585,
+   "neutral": true,
+   "coords": [
+    51.50853,
+    -0.12574
+   ],
+   "rest_home": 12.9,
+   "rest_away": 3.9
+  },
+  "ATM-BAY": {
+   "event": "401915386",
+   "venue": {
+    "name": "Riyadh Air Metropolitano",
+    "city": "Madrid",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2020-12-01",
+     "home": "ATM",
+     "away": "BAY",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2020-10-21",
+     "home": "BAY",
+     "away": "ATM",
+     "hg": 4,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2016-12-06",
+     "home": "BAY",
+     "away": "ATM",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2016-09-28",
+     "home": "ATM",
+     "away": "BAY",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2016-05-03",
+     "home": "BAY",
+     "away": "ATM",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1484,
+   "neutral": false,
+   "coords": [
+    40.4165,
+    -3.70256
+   ],
+   "rest_home": 3.3,
+   "rest_away": 3.1
+  },
+  "BAR-AVL": {
+   "event": "401915387",
+   "venue": {
+    "name": "Spotify Camp Nou",
+    "city": "Barcelona",
+    "country": "Spain"
+   },
+   "h2h": [],
+   "dist_km": 1271,
+   "neutral": false,
+   "coords": [
+    41.38879,
+    2.15899
+   ],
+   "rest_home": 3.0,
+   "rest_away": 3.0
+  },
+  "BOD-LIL": {
+   "event": "401915384",
+   "venue": {
+    "name": "Aspmyra Stadion",
+    "city": "Bodø/Glimt",
+    "country": "Norway"
+   },
+   "h2h": [],
+   "dist_km": null,
+   "neutral": false,
+   "coords": null,
+   "rest_home": 4.1,
+   "rest_away": 4.0
+  },
+  "FEY-INT": {
+   "event": "401915307",
+   "venue": {
+    "name": "De Kuip",
+    "city": "Rotterdam",
+    "country": "Netherlands"
+   },
+   "h2h": [
+    {
+     "date": "2025-03-11",
+     "home": "INT",
+     "away": "FEY",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2025-03-05",
+     "home": "FEY",
+     "away": "INT",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2002-04-11",
+     "home": "FEY",
+     "away": "INT",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2002-04-04",
+     "home": "INT",
+     "away": "FEY",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1185,
+   "neutral": false,
+   "coords": [
+    51.9225,
+    4.47917
+   ],
+   "rest_home": 3.2,
+   "rest_away": 3.0
+  },
+  "LAS-SLO": {
+   "event": "401915385",
+   "venue": {
+    "name": "Raiffeisen Arena (Linz)",
+    "city": "Linz",
+    "country": "Austria"
+   },
+   "h2h": [],
+   "dist_km": 210,
+   "neutral": false,
+   "coords": [
+    48.30639,
+    14.28611
+   ],
+   "rest_home": 3.1,
+   "rest_away": 14.0
+  },
+  "MUN-ROM": {
+   "event": "401915308",
+   "venue": {
+    "name": "Old Trafford",
+    "city": "Manchester",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2021-05-06",
+     "home": "ROM",
+     "away": "MUN",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2021-04-29",
+     "home": "MUN",
+     "away": "ROM",
+     "hg": 6,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2014-07-26",
+     "home": "ROM",
+     "away": "MUN",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2014-07-26",
+     "home": "ROM",
+     "away": "MUN",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2008-04-09",
+     "home": "MUN",
+     "away": "ROM",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2111,
+   "neutral": false,
+   "coords": [
+    53.48095,
+    -2.23743
+   ],
+   "rest_home": 3.3,
+   "rest_away": 3.1
+  },
+  "VIL-PSG": {
+   "event": "401915309",
+   "venue": {
+    "name": "Estadio de la Cerámica",
+    "city": "Villarreal",
+    "country": "Spain"
+   },
+   "h2h": [],
+   "dist_km": 1361,
+   "neutral": false,
+   "coords": [
+    38.72572,
+    -7.21533
+   ],
+   "rest_home": 4.0,
+   "rest_away": 4.1
+  },
+  "AEK-RMA": {
+   "event": "401915383",
+   "venue": {
+    "name": "OPAP Arena",
+    "city": "Athens",
+    "country": "Greece"
+   },
+   "h2h": [
+    {
+     "date": "2002-10-22",
+     "home": "RMA",
+     "away": "AEK",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2002-10-02",
+     "home": "AEK",
+     "away": "RMA",
+     "hg": 3,
+     "ag": 3,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2369,
+   "neutral": false,
+   "coords": [
+    37.98376,
+    23.72784
+   ],
+   "rest_home": 3.0,
+   "rest_away": 3.1
+  },
+  "FEN-LIV": {
+   "event": "401915382",
+   "venue": {
+    "name": "Şükrü Saracoğlu Stadium",
+    "city": "Istanbul",
+    "country": "Türkiye"
+   },
+   "h2h": [],
+   "dist_km": 2744,
+   "neutral": false,
+   "coords": [
+    41.01384,
+    28.94966
+   ],
+   "rest_home": 4.1,
+   "rest_away": 3.1
+  },
+  "BVB-BET": {
+   "event": "401915304",
+   "venue": {
+    "name": "Signal Iduna Park",
+    "city": "Aue",
+    "country": "Germany"
+   },
+   "h2h": [],
+   "dist_km": 2084,
+   "neutral": false,
+   "coords": [
+    50.59034,
+    12.70657
+   ],
+   "rest_home": 4.1,
+   "rest_away": 4.1
+  },
+  "POR-NAP": {
+   "event": "401915301",
+   "venue": {
+    "name": "Estádio do Dragão",
+    "city": "Porto",
+    "country": "Portugal"
+   },
+   "h2h": [
+    {
+     "date": "2014-03-20",
+     "home": "NAP",
+     "away": "POR",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2014-03-13",
+     "home": "POR",
+     "away": "NAP",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 3195,
+   "neutral": false,
+   "coords": [
+    41.1485,
+    -8.61097
+   ],
+   "rest_home": 4.0,
+   "rest_away": 3.0
+  },
+  "RCL-COM": {
+   "event": "401915305",
+   "venue": {
+    "name": "Stade Bollaert-Delelis",
+    "city": "Lens",
+    "country": "France"
+   },
+   "h2h": [],
+   "dist_km": 692,
+   "neutral": false,
+   "coords": [
+    50.43302,
+    2.82791
+   ],
+   "rest_home": 5.0,
+   "rest_away": 3.4
+  },
+  "PSV-BRU": {
+   "event": "401915303",
+   "venue": {
+    "name": "Philips Stadion",
+    "city": "Eindhoven",
+    "country": "Netherlands"
+   },
+   "h2h": [
+    {
+     "date": "2024-07-13",
+     "home": "PSV",
+     "away": "BRU",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2020-01-09",
+     "home": "PSV",
+     "away": "BRU",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2019-01-11",
+     "home": "PSV",
+     "away": "BRU",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 159,
+   "neutral": false,
+   "coords": [
+    51.44083,
+    5.47778
+   ],
+   "rest_home": 4.1,
+   "rest_away": 5.0
+  },
+  "RBL-MCI": {
+   "event": "401915306",
+   "venue": {
+    "name": "Red Bull Arena",
+    "city": "Leipzig",
+    "country": "Germany"
+   },
+   "h2h": [
+    {
+     "date": "2023-11-28",
+     "home": "MCI",
+     "away": "RBL",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2023-10-04",
+     "home": "RBL",
+     "away": "MCI",
+     "hg": 1,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2023-03-14",
+     "home": "MCI",
+     "away": "RBL",
+     "hg": 7,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2023-02-22",
+     "home": "RBL",
+     "away": "MCI",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2021-12-07",
+     "home": "RBL",
+     "away": "MCI",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1017,
+   "neutral": false,
+   "coords": [
+    51.33962,
+    12.37129
+   ],
+   "rest_home": 4.2,
+   "rest_away": 4.2
+  },
+  "SLA-ARS": {
+   "event": "401915381",
+   "venue": {
+    "name": "Fortuna Arena",
+    "city": "Prague",
+    "country": "Czechia"
+   },
+   "h2h": [
+    {
+     "date": "2025-11-04",
+     "home": "SLA",
+     "away": "ARS",
+     "hg": 0,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2021-04-15",
+     "home": "SLA",
+     "away": "ARS",
+     "hg": 0,
+     "ag": 4,
+     "neutral": false
+    },
+    {
+     "date": "2021-04-08",
+     "home": "ARS",
+     "away": "SLA",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2007-11-07",
+     "home": "SLA",
+     "away": "ARS",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2007-10-23",
+     "home": "ARS",
+     "away": "SLA",
+     "hg": 7,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1033,
+   "neutral": false,
+   "coords": [
+    50.08804,
+    14.42076
+   ],
+   "rest_home": 15.1,
+   "rest_away": 3.1
+  },
+  "VIK-SAB": {
+   "event": "401915302",
+   "venue": {
+    "name": "Viking Stadion",
+    "city": "Stavanger",
+    "country": "Norway"
+   },
+   "h2h": [],
+   "dist_km": 3691,
+   "neutral": false,
+   "coords": [
+    58.97005,
+    5.73332
+   ],
+   "rest_home": 5.1,
+   "rest_away": 15.1
+  },
+  "BOD-LAS": {
+   "event": "401915380",
+   "venue": {
+    "name": "Aspmyra Stadion",
+    "city": "Bodø/Glimt",
+    "country": "Norway"
+   },
+   "h2h": [],
+   "dist_km": null,
+   "neutral": false,
+   "coords": null
+  },
+  "GAL-AVL": {
+   "event": "401915300",
+   "venue": {
+    "name": "RAMS Park",
+    "city": "Istanbul",
+    "country": "Türkiye"
+   },
+   "h2h": [],
+   "dist_km": 2645,
+   "neutral": false,
+   "coords": [
+    41.01384,
+    28.94966
+   ]
+  },
+  "ARS-BVB": {
+   "event": "401915295",
+   "venue": {
+    "name": "Emirates Stadium",
+    "city": "London",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2026-08-09",
+     "home": "ARS",
+     "away": "BVB",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2014-11-26",
+     "home": "ARS",
+     "away": "BVB",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2014-09-16",
+     "home": "BVB",
+     "away": "ARS",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2013-11-06",
+     "home": "BVB",
+     "away": "ARS",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2013-10-22",
+     "home": "ARS",
+     "away": "BVB",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 902,
+   "neutral": false,
+   "coords": [
+    51.50853,
+    -0.12574
+   ]
+  },
+  "COM-AEK": {
+   "event": "401915296",
+   "venue": {
+    "name": "Giuseppe Sinigaglia",
+    "city": "Como",
+    "country": "Italy"
+   },
+   "h2h": [],
+   "dist_km": 1488,
+   "neutral": false,
+   "coords": [
+    45.80819,
+    9.0832
+   ]
+  },
+  "FEY-POR": {
+   "event": "401915294",
+   "venue": {
+    "name": "De Kuip",
+    "city": "Rotterdam",
+    "country": "Netherlands"
+   },
+   "h2h": [
+    {
+     "date": "2019-12-12",
+     "home": "POR",
+     "away": "FEY",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2019-10-03",
+     "home": "FEY",
+     "away": "POR",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1556,
+   "neutral": false,
+   "coords": [
+    51.9225,
+    4.47917
+   ]
+  },
+  "MCI-NAP": {
+   "event": "401915379",
+   "venue": {
+    "name": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2025-09-18",
+     "home": "MCI",
+     "away": "NAP",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2017-11-01",
+     "home": "NAP",
+     "away": "MCI",
+     "hg": 2,
+     "ag": 4,
+     "neutral": false
+    },
+    {
+     "date": "2017-10-17",
+     "home": "MCI",
+     "away": "NAP",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2011-11-22",
+     "home": "NAP",
+     "away": "MCI",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2011-09-14",
+     "home": "MCI",
+     "away": "NAP",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 4647,
+   "neutral": false,
+   "coords": [
+    53.48095,
+    -2.23743
+   ]
+  },
+  "RBL-RCL": {
+   "event": "401915299",
+   "venue": {
+    "name": "Red Bull Arena",
+    "city": "Leipzig",
+    "country": "Germany"
+   },
+   "h2h": [],
+   "dist_km": 677,
+   "neutral": false,
+   "coords": [
+    51.33962,
+    12.37129
+   ]
+  },
+  "RMA-PSV": {
+   "event": "401915298",
+   "venue": {
+    "name": "Santiago Bernabéu",
+    "city": "Madrid",
+    "country": "Spain"
+   },
+   "h2h": [],
+   "dist_km": 1414,
+   "neutral": false,
+   "coords": [
+    40.4165,
+    -3.70256
+   ]
+  },
+  "SLO-BET": {
+   "event": "401915297",
+   "venue": {
+    "name": "Národny Futbalovy Stadión",
+    "city": "Bratislava",
+    "country": "Slovakia"
+   },
+   "h2h": [],
+   "dist_km": 2219,
+   "neutral": false,
+   "coords": [
+    48.14816,
+    17.10674
+   ]
+  },
+  "SAB-BAR": {
+   "event": "401915378",
+   "venue": {
+    "name": "Baku Olympic Stadium",
+    "city": "Baku",
+    "country": "Azerbaijan"
+   },
+   "h2h": [],
+   "dist_km": 3963,
+   "neutral": false,
+   "coords": [
+    40.37767,
+    49.89201
+   ]
+  },
+  "SLA-VIL": {
+   "event": "401915293",
+   "venue": {
+    "name": "Fortuna Arena",
+    "city": "Prague",
+    "country": "Czechia"
+   },
+   "h2h": [
+    {
+     "date": "2017-11-02",
+     "home": "SLA",
+     "away": "VIL",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2017-10-19",
+     "home": "VIL",
+     "away": "SLA",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2120,
+   "neutral": false,
+   "coords": [
+    50.08804,
+    14.42076
+   ]
+  },
+  "ATM-VIK": {
+   "event": "401915291",
+   "venue": {
+    "name": "Riyadh Air Metropolitano",
+    "city": "Madrid",
+    "country": "Spain"
+   },
+   "h2h": [],
+   "dist_km": 2167,
+   "neutral": false,
+   "coords": [
+    40.4165,
+    -3.70256
+   ]
+  },
+  "BRU-LIV": {
+   "event": "401915292",
+   "venue": {
+    "name": "Jan Breydel Stadium",
+    "city": "Brugge",
+    "country": "Belgium"
+   },
+   "h2h": [],
+   "dist_km": 487,
+   "neutral": false,
+   "coords": [
+    51.20892,
+    3.22424
+   ]
+  },
+  "INT-STU": {
+   "event": "401915376",
+   "venue": {
+    "name": "San Siro",
+    "city": "Milano",
+    "country": "Italy"
+   },
+   "h2h": [],
+   "dist_km": 718,
+   "neutral": false,
+   "coords": [
+    42.78235,
+    12.59836
+   ]
+  },
+  "LIL-BAY": {
+   "event": "401915377",
+   "venue": {
+    "name": "Decathlon Arena - Stade Pierre-Mauroy",
+    "city": "Lille",
+    "country": "France"
+   },
+   "h2h": [
+    {
+     "date": "2012-11-07",
+     "home": "BAY",
+     "away": "LIL",
+     "hg": 6,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2012-10-23",
+     "home": "LIL",
+     "away": "BAY",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 676,
+   "neutral": false,
+   "coords": [
+    50.63391,
+    3.05512
+   ]
+  },
+  "PSG-ROM": {
+   "event": "401915374",
+   "venue": {
+    "name": "Parc des Princes",
+    "city": "Paris",
+    "country": "France"
+   },
+   "h2h": [
+    {
+     "date": "2017-07-20",
+     "home": "ROM",
+     "away": "PSG",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1788,
+   "neutral": false,
+   "coords": [
+    48.85341,
+    2.3488
+   ]
+  },
+  "SHA-FEN": {
+   "event": "401915375",
+   "venue": {
+    "name": "Stamford Bridge",
+    "city": "London",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2022-04-19",
+     "home": "FEN",
+     "away": "SHA",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2015-08-05",
+     "home": "SHA",
+     "away": "FEN",
+     "hg": 3,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2015-07-28",
+     "home": "FEN",
+     "away": "SHA",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2498,
+   "neutral": true,
+   "coords": [
+    51.50853,
+    -0.12574
+   ]
+  },
+  "SCP-MUN": {
+   "event": "401915373",
+   "venue": {
+    "name": "Estádio José Alvalade",
+    "city": "Lisbon",
+    "country": "Portugal"
+   },
+   "h2h": [
+    {
+     "date": "2007-11-27",
+     "home": "MUN",
+     "away": "SCP",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2007-09-19",
+     "home": "SCP",
+     "away": "MUN",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1723,
+   "neutral": false,
+   "coords": [
+    38.72509,
+    -9.1498
+   ]
+  },
+  "VIK-FEY": {
+   "event": "401915290",
+   "venue": {
+    "name": "Viking Stadion",
+    "city": "Stavanger",
+    "country": "Norway"
+   },
+   "h2h": [],
+   "dist_km": 788,
+   "neutral": false,
+   "coords": [
+    58.97005,
+    5.73332
+   ]
+  },
+  "VIL-SAB": {
+   "event": "401915372",
+   "venue": {
+    "name": "Estadio de la Cerámica",
+    "city": "Villarreal",
+    "country": "Spain"
+   },
+   "h2h": [],
+   "dist_km": 4812,
+   "neutral": false,
+   "coords": [
+    38.72572,
+    -7.21533
+   ]
+  },
+  "AEK-GAL": {
+   "event": "401915289",
+   "venue": {
+    "name": "OPAP Arena",
+    "city": "Athens",
+    "country": "Greece"
+   },
+   "h2h": [
+    {
+     "date": "2018-07-31",
+     "home": "AEK",
+     "away": "GAL",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 560,
+   "neutral": false,
+   "coords": [
+    37.98376,
+    23.72784
+   ]
+  },
+  "ROM-SCP": {
+   "event": "401915288",
+   "venue": {
+    "name": "Olimpico",
+    "city": "Roma",
+    "country": "Italy"
+   },
+   "h2h": [
+    {
+     "date": "2022-07-19",
+     "home": "SCP",
+     "away": "ROM",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2007-11-07",
+     "home": "SCP",
+     "away": "ROM",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2007-10-23",
+     "home": "ROM",
+     "away": "SCP",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 3034,
+   "neutral": false,
+   "coords": [
+    47.83333,
+    26.6
+   ]
+  },
+  "AVL-PSG": {
+   "event": "401915286",
+   "venue": {
+    "name": "Villa Park",
+    "city": "Birmingham",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2026-08-12",
+     "home": "PSG",
+     "away": "AVL",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2025-04-15",
+     "home": "AVL",
+     "away": "PSG",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2025-04-09",
+     "home": "PSG",
+     "away": "AVL",
+     "hg": 3,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 502,
+   "neutral": false,
+   "coords": [
+    52.48142,
+    -1.89983
+   ]
+  },
+  "BAR-MCI": {
+   "event": "401915285",
+   "venue": {
+    "name": "Spotify Camp Nou",
+    "city": "Barcelona",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2024-07-31",
+     "home": "BAR",
+     "away": "MCI",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2022-08-24",
+     "home": "BAR",
+     "away": "MCI",
+     "hg": 3,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2016-11-01",
+     "home": "MCI",
+     "away": "BAR",
+     "hg": 3,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2016-10-19",
+     "home": "BAR",
+     "away": "MCI",
+     "hg": 4,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2015-03-18",
+     "home": "BAR",
+     "away": "MCI",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1384,
+   "neutral": false,
+   "coords": [
+    41.38879,
+    2.15899
+   ]
+  },
+  "BAY-SLA": {
+   "event": "401915284",
+   "venue": {
+    "name": "Allianz Arena",
+    "city": "München",
+    "country": "Germany"
+   },
+   "h2h": [],
+   "dist_km": 300,
+   "neutral": false,
+   "coords": [
+    48.13743,
+    11.57549
+   ]
+  },
+  "MUN-RBL": {
+   "event": "401915371",
+   "venue": {
+    "name": "Old Trafford",
+    "city": "Manchester",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2020-12-08",
+     "home": "RBL",
+     "away": "MUN",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2020-10-28",
+     "home": "MUN",
+     "away": "RBL",
+     "hg": 5,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1017,
+   "neutral": false,
+   "coords": [
+    53.48095,
+    -2.23743
+   ]
+  },
+  "NAP-BRU": {
+   "event": "401915287",
+   "venue": {
+    "name": "Stadio Diego Armando Maradona",
+    "city": "Napoli",
+    "country": "Italy"
+   },
+   "h2h": [
+    {
+     "date": "2015-11-26",
+     "home": "BRU",
+     "away": "NAP",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2015-09-17",
+     "home": "NAP",
+     "away": "BRU",
+     "hg": 5,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 4575,
+   "neutral": false,
+   "coords": [
+    13.18333,
+    -16.18333
+   ]
+  },
+  "BET-COM": {
+   "event": "401915283",
+   "venue": {
+    "name": "Estadio La Cartuja",
+    "city": "Sevilla",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2025-08-06",
+     "home": "BET",
+     "away": "COM",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1559,
+   "neutral": false,
+   "coords": [
+    37.38283,
+    -5.97317
+   ]
+  },
+  "SLO-SHA": {
+   "event": "401915282",
+   "venue": {
+    "name": "Národny Futbalovy Stadión",
+    "city": "Bratislava",
+    "country": "Slovakia"
+   },
+   "h2h": [],
+   "dist_km": 1288,
+   "neutral": false,
+   "coords": [
+    48.14816,
+    17.10674
+   ]
+  },
+  "ARS-RMA": {
+   "event": "401915367",
+   "venue": {
+    "name": "Emirates Stadium",
+    "city": "London",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2025-04-16",
+     "home": "RMA",
+     "away": "ARS",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2025-04-08",
+     "home": "ARS",
+     "away": "RMA",
+     "hg": 3,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2019-07-23",
+     "home": "RMA",
+     "away": "ARS",
+     "hg": 2,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2006-03-08",
+     "home": "ARS",
+     "away": "RMA",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2006-02-21",
+     "home": "RMA",
+     "away": "ARS",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1264,
+   "neutral": false,
+   "coords": [
+    51.50853,
+    -0.12574
+   ]
+  },
+  "BVB-INT": {
+   "event": "401915368",
+   "venue": {
+    "name": "Signal Iduna Park",
+    "city": "Aue",
+    "country": "Germany"
+   },
+   "h2h": [
+    {
+     "date": "2026-01-28",
+     "home": "BVB",
+     "away": "INT",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2019-11-05",
+     "home": "BVB",
+     "away": "INT",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2019-10-23",
+     "home": "INT",
+     "away": "BVB",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 868,
+   "neutral": false,
+   "coords": [
+    50.59034,
+    12.70657
+   ]
+  },
+  "LAS-FEN": {
+   "event": "401915281",
+   "venue": {
+    "name": "Raiffeisen Arena (Linz)",
+    "city": "Linz",
+    "country": "Austria"
+   },
+   "h2h": [
+    {
+     "date": "2026-07-14",
+     "home": "LAS",
+     "away": "FEN",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1411,
+   "neutral": false,
+   "coords": [
+    48.30639,
+    14.28611
+   ]
+  },
+  "RCL-BOD": {
+   "event": "401915370",
+   "venue": {
+    "name": "Stade Bollaert-Delelis",
+    "city": "Lens",
+    "country": "France"
+   },
+   "h2h": [],
+   "dist_km": null,
+   "neutral": false,
+   "coords": [
+    50.43302,
+    2.82791
+   ]
+  },
+  "LIV-POR": {
+   "event": "401915369",
+   "venue": {
+    "name": "Anfield",
+    "city": "Liverpool",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2021-11-24",
+     "home": "LIV",
+     "away": "POR",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2021-09-28",
+     "home": "POR",
+     "away": "LIV",
+     "hg": 1,
+     "ag": 5,
+     "neutral": false
+    },
+    {
+     "date": "2019-04-17",
+     "home": "POR",
+     "away": "LIV",
+     "hg": 1,
+     "ag": 4,
+     "neutral": false
+    },
+    {
+     "date": "2019-04-09",
+     "home": "LIV",
+     "away": "POR",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2018-03-06",
+     "home": "LIV",
+     "away": "POR",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1427,
+   "neutral": false,
+   "coords": [
+    53.41058,
+    -2.97794
+   ]
+  },
+  "PSV-ATM": {
+   "event": "401915366",
+   "venue": {
+    "name": "Philips Stadion",
+    "city": "Eindhoven",
+    "country": "Netherlands"
+   },
+   "h2h": [
+    {
+     "date": "2025-12-09",
+     "home": "PSV",
+     "away": "ATM",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2016-11-23",
+     "home": "ATM",
+     "away": "PSV",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2016-09-13",
+     "home": "PSV",
+     "away": "ATM",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2016-03-15",
+     "home": "ATM",
+     "away": "PSV",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2016-02-24",
+     "home": "PSV",
+     "away": "ATM",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1414,
+   "neutral": false,
+   "coords": [
+    51.44083,
+    5.47778
+   ]
+  },
+  "STU-LIL": {
+   "event": "401915365",
+   "venue": {
+    "name": "MHPArena",
+    "city": "Stuttgart",
+    "country": "Germany"
+   },
+   "h2h": [],
+   "dist_km": 486,
+   "neutral": false,
+   "coords": [
+    48.78232,
+    9.17702
+   ]
+  },
+  "BOD-ATM": {
+   "event": "401915364",
+   "venue": {
+    "name": "Aspmyra Stadion",
+    "city": "Bodø/Glimt",
+    "country": "Norway"
+   },
+   "h2h": [
+    {
+     "date": "2026-01-28",
+     "home": "ATM",
+     "away": "BOD",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": null,
+   "neutral": false,
+   "coords": null
+  },
+  "GAL-FEY": {
+   "event": "401915363",
+   "venue": {
+    "name": "RAMS Park",
+    "city": "Istanbul",
+    "country": "Türkiye"
+   },
+   "h2h": [],
+   "dist_km": 2216,
+   "neutral": false,
+   "coords": [
+    41.01384,
+    28.94966
+   ]
+  },
+  "AEK-ROM": {
+   "event": "401915362",
+   "venue": {
+    "name": "OPAP Arena",
+    "city": "Athens",
+    "country": "Greece"
+   },
+   "h2h": [
+    {
+     "date": "2002-11-12",
+     "home": "ROM",
+     "away": "AEK",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2002-09-25",
+     "home": "AEK",
+     "away": "ROM",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1120,
+   "neutral": false,
+   "coords": [
+    37.98376,
+    23.72784
+   ]
+  },
+  "AVL-BVB": {
+   "event": "401915279",
+   "venue": {
+    "name": "Villa Park",
+    "city": "Birmingham",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2024-08-10",
+     "home": "BVB",
+     "away": "AVL",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1030,
+   "neutral": false,
+   "coords": [
+    52.48142,
+    -1.89983
+   ]
+  },
+  "POR-SLA": {
+   "event": "401915278",
+   "venue": {
+    "name": "Estádio do Dragão",
+    "city": "Porto",
+    "country": "Portugal"
+   },
+   "h2h": [],
+   "dist_km": 2037,
+   "neutral": false,
+   "coords": [
+    41.1485,
+    -8.61097
+   ]
+  },
+  "INT-LIV": {
+   "event": "401915360",
+   "venue": {
+    "name": "San Siro",
+    "city": "Milano",
+    "country": "Italy"
+   },
+   "h2h": [
+    {
+     "date": "2025-12-09",
+     "home": "INT",
+     "away": "LIV",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2022-03-08",
+     "home": "LIV",
+     "away": "INT",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2022-02-16",
+     "home": "INT",
+     "away": "LIV",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2008-03-11",
+     "home": "INT",
+     "away": "LIV",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2008-02-19",
+     "home": "LIV",
+     "away": "INT",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1647,
+   "neutral": false,
+   "coords": [
+    42.78235,
+    12.59836
+   ]
+  },
+  "LIL-SLO": {
+   "event": "401915361",
+   "venue": {
+    "name": "Decathlon Arena - Stade Pierre-Mauroy",
+    "city": "Lille",
+    "country": "France"
+   },
+   "h2h": [
+    {
+     "date": "2023-11-09",
+     "home": "SLO",
+     "away": "LIL",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2023-10-26",
+     "home": "LIL",
+     "away": "SLO",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1052,
+   "neutral": false,
+   "coords": [
+    50.63391,
+    3.05512
+   ]
+  },
+  "RMA-LAS": {
+   "event": "401915280",
+   "venue": {
+    "name": "Santiago Bernabéu",
+    "city": "Madrid",
+    "country": "Spain"
+   },
+   "h2h": [],
+   "dist_km": 1672,
+   "neutral": false,
+   "coords": [
+    40.4165,
+    -3.70256
+   ]
+  },
+  "STU-BRU": {
+   "event": "401915359",
+   "venue": {
+    "name": "MHPArena",
+    "city": "Stuttgart",
+    "country": "Germany"
+   },
+   "h2h": [
+    {
+     "date": "2002-12-12",
+     "home": "STU",
+     "away": "BRU",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2002-11-28",
+     "home": "BRU",
+     "away": "STU",
+     "hg": 1,
+     "ag": 2,
+     "neutral": false
+    }
+   ],
+   "dist_km": 504,
+   "neutral": false,
+   "coords": [
+    48.78232,
+    9.17702
+   ]
+  },
+  "FEN-VIL": {
+   "event": "401915277",
+   "venue": {
+    "name": "Şükrü Saracoğlu Stadium",
+    "city": "Istanbul",
+    "country": "Türkiye"
+   },
+   "h2h": [
+    {
+     "date": "2022-12-03",
+     "home": "FEN",
+     "away": "VIL",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 3075,
+   "neutral": false,
+   "coords": [
+    41.01384,
+    28.94966
+   ]
+  },
+  "SAB-NAP": {
+   "event": "401915358",
+   "venue": {
+    "name": "Baku Olympic Stadium",
+    "city": "Baku",
+    "country": "Azerbaijan"
+   },
+   "h2h": [],
+   "dist_km": 7044,
+   "neutral": false,
+   "coords": [
+    40.37767,
+    49.89201
+   ]
+  },
+  "COM-PSG": {
+   "event": "401915273",
+   "venue": {
+    "name": "Giuseppe Sinigaglia",
+    "city": "Como",
+    "country": "Italy"
+   },
+   "h2h": [],
+   "dist_km": 610,
+   "neutral": false,
+   "coords": [
+    45.80819,
+    9.0832
+   ]
+  },
+  "RCL-MCI": {
+   "event": "401915274",
+   "venue": {
+    "name": "Stade Bollaert-Delelis",
+    "city": "Lens",
+    "country": "France"
+   },
+   "h2h": [],
+   "dist_km": 485,
+   "neutral": false,
+   "coords": [
+    50.43302,
+    2.82791
+   ]
+  },
+  "MUN-BAY": {
+   "event": "401915357",
+   "venue": {
+    "name": "Old Trafford",
+    "city": "Manchester",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2023-12-12",
+     "home": "MUN",
+     "away": "BAY",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2023-09-20",
+     "home": "BAY",
+     "away": "MUN",
+     "hg": 4,
+     "ag": 3,
+     "neutral": false
+    },
+    {
+     "date": "2018-08-05",
+     "home": "BAY",
+     "away": "MUN",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2014-04-09",
+     "home": "BAY",
+     "away": "MUN",
+     "hg": 3,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2014-04-01",
+     "home": "MUN",
+     "away": "BAY",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1135,
+   "neutral": false,
+   "coords": [
+    53.48095,
+    -2.23743
+   ]
+  },
+  "RBL-SHA": {
+   "event": "401915276",
+   "venue": {
+    "name": "Red Bull Arena",
+    "city": "Leipzig",
+    "country": "Germany"
+   },
+   "h2h": [
+    {
+     "date": "2022-11-02",
+     "home": "SHA",
+     "away": "RBL",
+     "hg": 0,
+     "ag": 4,
+     "neutral": false
+    },
+    {
+     "date": "2022-09-06",
+     "home": "RBL",
+     "away": "SHA",
+     "hg": 1,
+     "ag": 4,
+     "neutral": false
+    }
+   ],
+   "dist_km": 866,
+   "neutral": false,
+   "coords": [
+    51.33962,
+    12.37129
+   ]
+  },
+  "BET-ARS": {
+   "event": "401915275",
+   "venue": {
+    "name": "Estadio La Cartuja",
+    "city": "Sevilla",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2026-08-05",
+     "home": "ARS",
+     "away": "BET",
+     "hg": 1,
+     "ag": 3,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1637,
+   "neutral": false,
+   "coords": [
+    37.38283,
+    -5.97317
+   ]
+  },
+  "SCP-BAR": {
+   "event": "401915356",
+   "venue": {
+    "name": "Estádio José Alvalade",
+    "city": "Lisbon",
+    "country": "Portugal"
+   },
+   "h2h": [
+    {
+     "date": "2017-12-05",
+     "home": "BAR",
+     "away": "SCP",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2017-09-27",
+     "home": "SCP",
+     "away": "BAR",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2008-11-26",
+     "home": "SCP",
+     "away": "BAR",
+     "hg": 2,
+     "ag": 5,
+     "neutral": false
+    },
+    {
+     "date": "2008-09-16",
+     "home": "BAR",
+     "away": "SCP",
+     "hg": 3,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1006,
+   "neutral": false,
+   "coords": [
+    38.72509,
+    -9.1498
+   ]
+  },
+  "VIK-PSV": {
+   "event": "401915272",
+   "venue": {
+    "name": "Viking Stadion",
+    "city": "Stavanger",
+    "country": "Norway"
+   },
+   "h2h": [],
+   "dist_km": 837,
+   "neutral": false,
+   "coords": [
+    58.97005,
+    5.73332
+   ]
+  },
+  "ARS-SAB": {
+   "event": "401915346",
+   "venue": {
+    "name": "Emirates Stadium",
+    "city": "London",
+    "country": "England"
+   },
+   "h2h": [],
+   "dist_km": 3974,
+   "neutral": false,
+   "coords": [
+    51.50853,
+    -0.12574
+   ]
+  },
+  "ROM-LIL": {
+   "event": "401915354",
+   "venue": {
+    "name": "Olimpico",
+    "city": "Roma",
+    "country": "Italy"
+   },
+   "h2h": [
+    {
+     "date": "2025-10-02",
+     "home": "ROM",
+     "away": "LIL",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2019-08-03",
+     "home": "LIL",
+     "away": "ROM",
+     "hg": 2,
+     "ag": 3,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1730,
+   "neutral": false,
+   "coords": [
+    47.83333,
+    26.6
+   ]
+  },
+  "ATM-FEN": {
+   "event": "401915347",
+   "venue": {
+    "name": "Riyadh Air Metropolitano",
+    "city": "Madrid",
+    "country": "Spain"
+   },
+   "h2h": [],
+   "dist_km": 2737,
+   "neutral": false,
+   "coords": [
+    40.4165,
+    -3.70256
+   ]
+  },
+  "BAR-COM": {
+   "event": "401915264",
+   "venue": {
+    "name": "Spotify Camp Nou",
+    "city": "Barcelona",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2025-08-10",
+     "home": "BAR",
+     "away": "COM",
+     "hg": 5,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 743,
+   "neutral": false,
+   "coords": [
+    41.38879,
+    2.15899
+   ]
+  },
+  "BAY-BET": {
+   "event": "401915348",
+   "venue": {
+    "name": "Allianz Arena",
+    "city": "München",
+    "country": "Germany"
+   },
+   "h2h": [],
+   "dist_km": 1858,
+   "neutral": false,
+   "coords": [
+    48.13743,
+    11.57549
+   ]
+  },
+  "BVB-AEK": {
+   "event": "401915265",
+   "venue": {
+    "name": "Signal Iduna Park",
+    "city": "Aue",
+    "country": "Germany"
+   },
+   "h2h": [],
+   "dist_km": 1650,
+   "neutral": false,
+   "coords": [
+    50.59034,
+    12.70657
+   ]
+  },
+  "BRU-BOD": {
+   "event": "401915266",
+   "venue": {
+    "name": "Jan Breydel Stadium",
+    "city": "Brugge",
+    "country": "Belgium"
+   },
+   "h2h": [
+    {
+     "date": "2023-12-14",
+     "home": "BRU",
+     "away": "BOD",
+     "hg": 3,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2023-10-05",
+     "home": "BOD",
+     "away": "BRU",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": null,
+   "neutral": false,
+   "coords": [
+    51.20892,
+    3.22424
+   ]
+  },
+  "FEY-RBL": {
+   "event": "401915271",
+   "venue": {
+    "name": "De Kuip",
+    "city": "Rotterdam",
+    "country": "Netherlands"
+   },
+   "h2h": [],
+   "dist_km": 548,
+   "neutral": false,
+   "coords": [
+    51.9225,
+    4.47917
+   ]
+  },
+  "LAS-POR": {
+   "event": "401915355",
+   "venue": {
+    "name": "Raiffeisen Arena (Linz)",
+    "city": "Linz",
+    "country": "Austria"
+   },
+   "h2h": [],
+   "dist_km": 1966,
+   "neutral": false,
+   "coords": [
+    48.30639,
+    14.28611
+   ]
+  },
+  "LIV-RCL": {
+   "event": "401915353",
+   "venue": {
+    "name": "Anfield",
+    "city": "Liverpool",
+    "country": "England"
+   },
+   "h2h": [],
+   "dist_km": 518,
+   "neutral": false,
+   "coords": [
+    53.41058,
+    -2.97794
+   ]
+  },
+  "MCI-SCP": {
+   "event": "401915352",
+   "venue": {
+    "name": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2024-11-05",
+     "home": "SCP",
+     "away": "MCI",
+     "hg": 4,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2022-03-09",
+     "home": "MCI",
+     "away": "SCP",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2022-02-15",
+     "home": "SCP",
+     "away": "MCI",
+     "hg": 0,
+     "ag": 5,
+     "neutral": false
+    },
+    {
+     "date": "2012-03-15",
+     "home": "MCI",
+     "away": "SCP",
+     "hg": 3,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2012-03-08",
+     "home": "SCP",
+     "away": "MCI",
+     "hg": 1,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1723,
+   "neutral": false,
+   "coords": [
+    53.48095,
+    -2.23743
+   ]
+  },
+  "NAP-VIK": {
+   "event": "401915268",
+   "venue": {
+    "name": "Stadio Diego Armando Maradona",
+    "city": "Napoli",
+    "country": "Italy"
+   },
+   "h2h": [],
+   "dist_km": 5406,
+   "neutral": false,
+   "coords": [
+    13.18333,
+    -16.18333
+   ]
+  },
+  "PSG-GAL": {
+   "event": "401915267",
+   "venue": {
+    "name": "Parc des Princes",
+    "city": "Paris",
+    "country": "France"
+   },
+   "h2h": [
+    {
+     "date": "2019-12-11",
+     "home": "PSG",
+     "away": "GAL",
+     "hg": 5,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2019-10-01",
+     "home": "GAL",
+     "away": "PSG",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 2253,
+   "neutral": false,
+   "coords": [
+    48.85341,
+    2.3488
+   ]
+  },
+  "PSV-STU": {
+   "event": "401915350",
+   "venue": {
+    "name": "Philips Stadion",
+    "city": "Eindhoven",
+    "country": "Netherlands"
+   },
+   "h2h": [],
+   "dist_km": 396,
+   "neutral": false,
+   "coords": [
+    51.44083,
+    5.47778
+   ]
+  },
+  "SHA-RMA": {
+   "event": "401915270",
+   "venue": {
+    "name": "Stamford Bridge",
+    "city": "London",
+    "country": "England"
+   },
+   "h2h": [
+    {
+     "date": "2022-10-11",
+     "home": "SHA",
+     "away": "RMA",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2022-10-05",
+     "home": "RMA",
+     "away": "SHA",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2021-11-03",
+     "home": "RMA",
+     "away": "SHA",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2021-10-19",
+     "home": "SHA",
+     "away": "RMA",
+     "hg": 0,
+     "ag": 5,
+     "neutral": false
+    },
+    {
+     "date": "2020-12-01",
+     "home": "SHA",
+     "away": "RMA",
+     "hg": 2,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1264,
+   "neutral": true,
+   "coords": [
+    51.50853,
+    -0.12574
+   ]
+  },
+  "SLA-AVL": {
+   "event": "401915351",
+   "venue": {
+    "name": "Fortuna Arena",
+    "city": "Prague",
+    "country": "Czechia"
+   },
+   "h2h": [
+    {
+     "date": "2008-11-06",
+     "home": "SLA",
+     "away": "AVL",
+     "hg": 0,
+     "ag": 1,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1163,
+   "neutral": false,
+   "coords": [
+    50.08804,
+    14.42076
+   ]
+  },
+  "SLO-INT": {
+   "event": "401915269",
+   "venue": {
+    "name": "Národny Futbalovy Stadión",
+    "city": "Bratislava",
+    "country": "Slovakia"
+   },
+   "h2h": [],
+   "dist_km": 692,
+   "neutral": false,
+   "coords": [
+    48.14816,
+    17.10674
+   ]
+  },
+  "VIL-MUN": {
+   "event": "401915349",
+   "venue": {
+    "name": "Estadio de la Cerámica",
+    "city": "Villarreal",
+    "country": "Spain"
+   },
+   "h2h": [
+    {
+     "date": "2021-11-23",
+     "home": "VIL",
+     "away": "MUN",
+     "hg": 0,
+     "ag": 2,
+     "neutral": false
+    },
+    {
+     "date": "2021-09-29",
+     "home": "MUN",
+     "away": "VIL",
+     "hg": 2,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2021-05-26",
+     "home": "VIL",
+     "away": "MUN",
+     "hg": 1,
+     "ag": 1,
+     "neutral": false
+    },
+    {
+     "date": "2008-11-25",
+     "home": "VIL",
+     "away": "MUN",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    },
+    {
+     "date": "2008-09-17",
+     "home": "MUN",
+     "away": "VIL",
+     "hg": 0,
+     "ag": 0,
+     "neutral": false
+    }
+   ],
+   "dist_km": 1684,
+   "neutral": false,
+   "coords": [
+    38.72572,
+    -7.21533
+   ]
+  }
+ },
+ "geo": {
+  "Athens|Greece": [
+   37.98376,
+   23.72784
+  ],
+  "Linz|Austria": [
+   48.30639,
+   14.28611
+  ],
+  "Brugge|Belgium": [
+   51.20892,
+   3.22424
+  ],
+  "Birmingham|England": [
+   52.48142,
+   -1.89983
+  ],
+  "Aue|Germany": [
+   50.59034,
+   12.70657
+  ],
+  "Villarreal|Spain": [
+   38.72572,
+   -7.21533
+  ],
+  "Porto|Portugal": [
+   41.1485,
+   -8.61097
+  ],
+  "Manchester|England": [
+   53.48095,
+   -2.23743
+  ],
+  "Lille|France": [
+   50.63391,
+   3.05512
+  ],
+  "Sevilla|Spain": [
+   37.38283,
+   -5.97317
+  ],
+  "Madrid|Spain": [
+   40.4165,
+   -3.70256
+  ],
+  "Milano|Italy": [
+   42.78235,
+   12.59836
+  ],
+  "Barcelona|Spain": [
+   41.38879,
+   2.15899
+  ],
+  "Rotterdam|Netherlands": [
+   51.9225,
+   4.47917
+  ],
+  "Stuttgart|Germany": [
+   48.78232,
+   9.17702
+  ],
+  "Stavanger|Norway": [
+   58.97005,
+   5.73332
+  ],
+  "Liverpool|England": [
+   53.41058,
+   -2.97794
+  ],
+  "Paris|France": [
+   48.85341,
+   2.3488
+  ],
+  "Bratislava|Slovakia": [
+   48.14816,
+   17.10674
+  ],
+  "Lisbon|Portugal": [
+   38.72509,
+   -9.1498
+  ],
+  "Istanbul|Türkiye": [
+   41.01384,
+   28.94966
+  ],
+  "Napoli|Italy": [
+   13.18333,
+   -16.18333
+  ],
+  "London|England": [
+   51.50853,
+   -0.12574
+  ],
+  "Roma|Italy": [
+   47.83333,
+   26.6
+  ],
+  "Eindhoven|Netherlands": [
+   51.44083,
+   5.47778
+  ],
+  "Como|Italy": [
+   45.80819,
+   9.0832
+  ],
+  "Leipzig|Germany": [
+   51.33962,
+   12.37129
+  ],
+  "München|Germany": [
+   48.13743,
+   11.57549
+  ],
+  "Bodø/Glimt|Norway": null,
+  "Baku|Azerbaijan": [
+   40.37767,
+   49.89201
+  ],
+  "Prague|Czechia": [
+   50.08804,
+   14.42076
+  ],
+  "Lens|France": [
+   50.43302,
+   2.82791
+  ]
+ },
+ "espn_id": {
+  "AEK": "887",
+  "LAS": "4411",
+  "BRU": "570",
+  "AVL": "362",
+  "BVB": "124",
+  "VIL": "102",
+  "POR": "437",
+  "MCI": "382",
+  "LIL": "166",
+  "BET": "244",
+  "RMA": "86",
+  "INT": "110",
+  "BAR": "83",
+  "FEY": "142",
+  "STU": "134",
+  "VIK": "510",
+  "LIV": "364",
+  "ATM": "1068",
+  "NAP": "114",
+  "ARS": "359",
+  "PSG": "160",
+  "SLO": "521",
+  "SCP": "2250",
+  "GAL": "432",
+  "FEN": "436",
+  "ROM": "104",
+  "PSV": "148",
+  "SHA": "493",
+  "BAY": "132",
+  "BOD": "2980",
+  "COM": "2572",
+  "RBL": "11420",
+  "MUN": "360",
+  "SAB": "21922",
+  "SLA": "494",
+  "RCL": "175"
+ }
+}
