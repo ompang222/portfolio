@@ -365,7 +365,7 @@ async function poll() {
   if (!ds.length) { liveChip.hidden = true; setTimeout(poll, 60e3); return; }
   try {
     for (const d of ds) {
-      const r = await fetch(`https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=${d}`, {cache: 'no-store'});
+      const r = await fetch(`https://site.web.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=${d}`);
       const j = await r.json();
       for (const e of j.events || []) {
         const comp = e.competitions[0], st = comp.status.type;
