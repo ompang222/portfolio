@@ -118,6 +118,7 @@ def main():
             ds |= {kick[f"{x['home']}-{x['away']}"] for x in rows if code in (x['home'], x['away'])}   # UCL 경기
             sched[code] = sorted(ds)
         return sched[code]
+    wx_fail = []
     for r in rows:
         if r['status'] == 'FT':
             continue
@@ -130,7 +131,10 @@ def main():
                 M[f'rest_{side}'] = round((ko - dt.datetime.fromisoformat(prev[-1].replace('Z', '+00:00'))).total_seconds() / 86400, 1) if prev else None
         if days <= 15 and M.get('coords'):
             lat, lon = M['coords']
-            w = get(WX.format(lat, lon, d=ko.date().isoformat()))['hourly']
+            try:
+                w = get(WX.format(lat, lon, d=ko.date().isoformat()))['hourly']
+            except OSError:                      # 날씨 API가 안 되면 이전 예보를 그대로 두고 계속
+                wx_fail.append(k); continue
             i = min(ko.hour, len(w['time']) - 1)
             M['weather'] = dict(precip=w['precipitation'][i], wind=w['wind_speed_10m'][i], temp=w['temperature_2m'][i],
                                 fetched=now.strftime('%Y-%m-%d %H:%M'))
@@ -140,6 +144,8 @@ def main():
           '· 휴식일', sum('rest_home' in F['matches'][f"{r['home']}-{r['away']}"] for r in nxt),
           '· 날씨', sum('weather' in F['matches'][f"{r['home']}-{r['away']}"] for r in nxt),
           '· 중립', [k for k, M in F['matches'].items() if M.get('neutral')])
+    if wx_fail:
+        print('날씨 못 받음(이전 값 유지):', len(wx_fail), '경기')
 
 if __name__ == '__main__':
     main()

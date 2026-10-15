@@ -3,7 +3,7 @@
 python fetch_data.py   # data/matches.csv, data/ratings.csv 갱신
 부상 정보(data/injuries.csv)는 기사를 읽고 사람이(또는 Claude가) 직접 고칩니다.
 """
-import csv, json, datetime as dt, urllib.request
+import csv, json, time, datetime as dt, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -20,9 +20,15 @@ ESPN_NAMES = {
     'Sabah FK': 'SAB', 'Sabah': 'SAB', 'Viking': 'VIK', 'RC Lens': 'RCL', 'Inter Milan': 'INT',
 }
 
-def get(url):
+def get(url, tries=3):
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    return json.load(urllib.request.urlopen(req, timeout=60))
+    for i in range(tries):                       # 일시적인 접속 시간 초과는 잠시 뒤 다시 시도
+        try:
+            return json.load(urllib.request.urlopen(req, timeout=30))
+        except OSError:
+            if i == tries - 1:
+                raise
+            time.sleep(5 * (i + 1))
 
 def update_scores():
     path = ROOT/'data/matches.csv'
