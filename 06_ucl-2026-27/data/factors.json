@@ -1111,9 +1111,9 @@
    "rest_away": 7.0,
    "weather": {
     "precip": 0.0,
-    "wind": 7.9,
-    "temp": 17.4,
-    "fetched": "2026-10-16 09:45"
+    "wind": 9.9,
+    "temp": 17.1,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "SAB-BVB": {
@@ -1134,9 +1134,9 @@
    "rest_away": 3.1,
    "weather": {
     "precip": 0.0,
-    "wind": 9.7,
-    "temp": 18.3,
-    "fetched": "2026-10-16 09:45"
+    "wind": 13.1,
+    "temp": 18.8,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "ROM-SLO": {
@@ -1174,9 +1174,9 @@
    "rest_away": 6.0,
    "weather": {
     "precip": 0.0,
-    "wind": 1.5,
-    "temp": 11.0,
-    "fetched": "2026-10-16 09:45"
+    "wind": 6.7,
+    "temp": 10.4,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "POR-PSV": {
@@ -1206,9 +1206,9 @@
    "rest_away": 3.2,
    "weather": {
     "precip": 0.0,
-    "wind": 8.0,
-    "temp": 14.5,
-    "fetched": "2026-10-16 09:45"
+    "wind": 8.4,
+    "temp": 14.4,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "LIV-VIL": {
@@ -1261,10 +1261,10 @@
    "rest_home": 3.2,
    "rest_away": 3.2,
    "weather": {
-    "precip": 0.0,
-    "wind": 12.6,
-    "temp": 12.4,
-    "fetched": "2026-10-16 09:45"
+    "precip": 0.1,
+    "wind": 6.8,
+    "temp": 11.9,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "MCI-AEK": {
@@ -1284,10 +1284,10 @@
    "rest_home": 3.2,
    "rest_away": 6.0,
    "weather": {
-    "precip": 0.0,
-    "wind": 10.8,
-    "temp": 11.6,
-    "fetched": "2026-10-16 09:45"
+    "precip": 0.1,
+    "wind": 4.7,
+    "temp": 12.3,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "NAP-BOD": {
@@ -1307,10 +1307,10 @@
    "rest_home": 3.2,
    "rest_away": 3.3,
    "weather": {
-    "precip": 0.1,
-    "wind": 9.9,
-    "temp": 25.6,
-    "fetched": "2026-10-16 09:45"
+    "precip": 0.4,
+    "wind": 0.6,
+    "temp": 27.8,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "PSG-BAR": {
@@ -1372,9 +1372,9 @@
    "rest_away": 3.1,
    "weather": {
     "precip": 0.0,
-    "wind": 8.6,
-    "temp": 12.0,
-    "fetched": "2026-10-16 09:45"
+    "wind": 7.6,
+    "temp": 12.9,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "STU-ATM": {
@@ -1403,10 +1403,10 @@
    "rest_home": 3.2,
    "rest_away": 3.3,
    "weather": {
-    "precip": 0.0,
-    "wind": 1.9,
-    "temp": 11.7,
-    "fetched": "2026-10-16 09:45"
+    "precip": 0.1,
+    "wind": 1.5,
+    "temp": 10.4,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "COM-MUN": {
@@ -1426,10 +1426,10 @@
    "rest_home": 3.2,
    "rest_away": 3.2,
    "weather": {
-    "precip": 1.0,
-    "wind": 2.9,
+    "precip": 2.3,
+    "wind": 3.6,
     "temp": 15.3,
-    "fetched": "2026-10-16 09:45"
+    "fetched": "2026-10-17 03:45"
    }
   },
   "LIL-GAL": {
@@ -1449,10 +1449,10 @@
    "rest_home": 3.9,
    "rest_away": 4.2,
    "weather": {
-    "precip": 1.5,
-    "wind": 19.8,
-    "temp": 11.3,
-    "fetched": "2026-10-16 09:45"
+    "precip": 0.0,
+    "wind": 16.7,
+    "temp": 13.0,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "AVL-VIK": {
@@ -1472,10 +1472,10 @@
    "rest_home": 4.1,
    "rest_away": 4.1,
    "weather": {
-    "precip": 0.1,
-    "wind": 9.4,
-    "temp": 10.8,
-    "fetched": "2026-10-16 09:45"
+    "precip": 1.4,
+    "wind": 23.4,
+    "temp": 8.6,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "BAY-ARS": {
@@ -1536,10 +1536,10 @@
    "rest_home": 4.1,
    "rest_away": 3.1,
    "weather": {
-    "precip": 1.3,
-    "wind": 9.6,
-    "temp": 9.9,
-    "fetched": "2026-10-16 09:45"
+    "precip": 0.5,
+    "wind": 3.9,
+    "temp": 10.1,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "BRU-RCL": {
@@ -1559,10 +1559,10 @@
    "rest_home": 8.0,
    "rest_away": 4.0,
    "weather": {
-    "precip": 0.1,
-    "wind": 20.2,
-    "temp": 9.6,
-    "fetched": "2026-10-16 09:45"
+    "precip": 0.0,
+    "wind": 11.2,
+    "temp": 10.3,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "INT-SHA": {
@@ -1624,9 +1624,9 @@
    "rest_away": 7.0,
    "weather": {
     "precip": 0.0,
-    "wind": 23.1,
-    "temp": 12.9,
-    "fetched": "2026-10-16 09:45"
+    "wind": 29.3,
+    "temp": 13.1,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "BET-FEY": {
@@ -1656,9 +1656,9 @@
    "rest_away": 4.0,
    "weather": {
     "precip": 0.0,
-    "wind": 2.4,
-    "temp": 19.5,
-    "fetched": "2026-10-16 09:45"
+    "wind": 5.9,
+    "temp": 20.5,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "RMA-RBL": {
@@ -1712,9 +1712,9 @@
    "rest_away": 4.1,
    "weather": {
     "precip": 0.0,
-    "wind": 2.8,
-    "temp": 15.1,
-    "fetched": "2026-10-16 09:45"
+    "wind": 5.8,
+    "temp": 14.7,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "SCP-LAS": {
@@ -1760,9 +1760,9 @@
    "rest_away": 4.2,
    "weather": {
     "precip": 0.0,
-    "wind": 8.0,
-    "temp": 17.4,
-    "fetched": "2026-10-16 09:45"
+    "wind": 12.1,
+    "temp": 15.6,
+    "fetched": "2026-10-17 03:45"
    }
   },
   "GAL-STU": {
