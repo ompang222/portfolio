@@ -1780,7 +1780,13 @@
     28.94966
    ],
    "rest_home": 4.0,
-   "rest_away": 3.1
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 5.8,
+    "temp": 16.3,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "SHA-SCP": {
    "event": "401915310",
@@ -1814,7 +1820,13 @@
     -0.12574
    ],
    "rest_home": 12.9,
-   "rest_away": 3.9
+   "rest_away": 3.9,
+   "weather": {
+    "precip": 0.0,
+    "wind": 12.6,
+    "temp": 11.1,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "ATM-BAY": {
    "event": "401915386",
@@ -1872,7 +1884,13 @@
     -3.70256
    ],
    "rest_home": 3.3,
-   "rest_away": 3.1
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 9.7,
+    "temp": 10.1,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "BAR-AVL": {
    "event": "401915387",
@@ -1889,7 +1907,13 @@
     2.15899
    ],
    "rest_home": 3.0,
-   "rest_away": 3.0
+   "rest_away": 3.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 5.4,
+    "temp": 9.6,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "BOD-LIL": {
    "event": "401915384",
@@ -1953,7 +1977,13 @@
     4.47917
    ],
    "rest_home": 3.2,
-   "rest_away": 3.0
+   "rest_away": 3.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 4.9,
+    "temp": 10.4,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "LAS-SLO": {
    "event": "401915385",
@@ -1970,7 +2000,13 @@
     14.28611
    ],
    "rest_home": 3.1,
-   "rest_away": 14.0
+   "rest_away": 14.0,
+   "weather": {
+    "precip": 0.2,
+    "wind": 3.2,
+    "temp": 4.7,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "MUN-ROM": {
    "event": "401915308",
@@ -2028,7 +2064,13 @@
     -2.23743
    ],
    "rest_home": 3.3,
-   "rest_away": 3.1
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 3.2,
+    "temp": 9.7,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "VIL-PSG": {
    "event": "401915309",
@@ -2045,7 +2087,13 @@
     -7.21533
    ],
    "rest_home": 4.0,
-   "rest_away": 4.1
+   "rest_away": 4.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 4.5,
+    "temp": 14.2,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "AEK-RMA": {
    "event": "401915383",
@@ -2079,7 +2127,13 @@
     23.72784
    ],
    "rest_home": 3.0,
-   "rest_away": 3.1
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 6.4,
+    "temp": 16.2,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "FEN-LIV": {
    "event": "401915382",
@@ -2096,7 +2150,13 @@
     28.94966
    ],
    "rest_home": 4.1,
-   "rest_away": 3.1
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 12.0,
+    "temp": 11.5,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "BVB-BET": {
    "event": "401915304",
@@ -2113,7 +2173,13 @@
     12.70657
    ],
    "rest_home": 4.1,
-   "rest_away": 4.1
+   "rest_away": 4.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 6.2,
+    "temp": 1.9,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "POR-NAP": {
    "event": "401915301",
@@ -2147,7 +2213,13 @@
     -8.61097
    ],
    "rest_home": 4.0,
-   "rest_away": 3.0
+   "rest_away": 3.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 5.3,
+    "temp": 12.4,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "RCL-COM": {
    "event": "401915305",
@@ -2164,7 +2236,13 @@
     2.82791
    ],
    "rest_home": 5.0,
-   "rest_away": 3.4
+   "rest_away": 3.4,
+   "weather": {
+    "precip": 0.0,
+    "wind": 11.8,
+    "temp": 6.0,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "PSV-BRU": {
    "event": "401915303",
@@ -2206,7 +2284,13 @@
     5.47778
    ],
    "rest_home": 4.1,
-   "rest_away": 5.0
+   "rest_away": 5.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 10.2,
+    "temp": 5.3,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "RBL-MCI": {
    "event": "401915306",
@@ -2264,7 +2348,13 @@
     12.37129
    ],
    "rest_home": 4.2,
-   "rest_away": 4.2
+   "rest_away": 4.2,
+   "weather": {
+    "precip": 0.0,
+    "wind": 8.4,
+    "temp": 3.7,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "SLA-ARS": {
    "event": "401915381",
@@ -2322,7 +2412,13 @@
     14.42076
    ],
    "rest_home": 15.1,
-   "rest_away": 3.1
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 5.5,
+    "temp": 3.2,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "VIK-SAB": {
    "event": "401915302",
@@ -2339,7 +2435,13 @@
     5.73332
    ],
    "rest_home": 5.1,
-   "rest_away": 15.1
+   "rest_away": 15.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 16.4,
+    "temp": 9.8,
+    "fetched": "2026-10-29 00:09"
+   }
   },
   "BOD-LAS": {
    "event": "401915380",
