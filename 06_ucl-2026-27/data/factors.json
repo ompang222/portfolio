@@ -2453,7 +2453,9 @@
    "h2h": [],
    "dist_km": null,
    "neutral": false,
-   "coords": null
+   "coords": null,
+   "rest_home": 4.0,
+   "rest_away": 3.1
   },
   "GAL-AVL": {
    "event": "401915300",
@@ -2468,7 +2470,15 @@
    "coords": [
     41.01384,
     28.94966
-   ]
+   ],
+   "rest_home": 3.2,
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 13.0,
+    "temp": 10.5,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "ARS-BVB": {
    "event": "401915295",
@@ -2524,7 +2534,15 @@
    "coords": [
     51.50853,
     -0.12574
-   ]
+   ],
+   "rest_home": 3.1,
+   "rest_away": 3.2,
+   "weather": {
+    "precip": 0.0,
+    "wind": 9.8,
+    "temp": 6.7,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "COM-AEK": {
    "event": "401915296",
@@ -2539,7 +2557,15 @@
    "coords": [
     45.80819,
     9.0832
-   ]
+   ],
+   "rest_home": 3.2,
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.6,
+    "wind": 2.6,
+    "temp": 6.4,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "FEY-POR": {
    "event": "401915294",
@@ -2571,7 +2597,15 @@
    "coords": [
     51.9225,
     4.47917
-   ]
+   ],
+   "rest_home": 3.1,
+   "rest_away": 16.1,
+   "weather": {
+    "precip": 0.4,
+    "wind": 18.0,
+    "temp": 7.8,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "MCI-NAP": {
    "event": "401915379",
@@ -2627,7 +2661,15 @@
    "coords": [
     53.48095,
     -2.23743
-   ]
+   ],
+   "rest_home": 3.3,
+   "rest_away": 3.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 11.5,
+    "temp": 5.2,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "RBL-RCL": {
    "event": "401915299",
@@ -2642,7 +2684,15 @@
    "coords": [
     51.33962,
     12.37129
-   ]
+   ],
+   "rest_home": 3.2,
+   "rest_away": 3.0,
+   "weather": {
+    "precip": 0.1,
+    "wind": 12.8,
+    "temp": 6.7,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "RMA-PSV": {
    "event": "401915298",
@@ -2657,7 +2707,15 @@
    "coords": [
     40.4165,
     -3.70256
-   ]
+   ],
+   "rest_home": 3.0,
+   "rest_away": 3.2,
+   "weather": {
+    "precip": 3.5,
+    "wind": 6.0,
+    "temp": 11.1,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "SLO-BET": {
    "event": "401915297",
@@ -2672,7 +2730,15 @@
    "coords": [
     48.14816,
     17.10674
-   ]
+   ],
+   "rest_home": 21.0,
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 15.4,
+    "temp": 5.3,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "SAB-BAR": {
    "event": "401915378",
@@ -2687,7 +2753,15 @@
    "coords": [
     40.37767,
     49.89201
-   ]
+   ],
+   "rest_home": 20.9,
+   "rest_away": 3.2,
+   "weather": {
+    "precip": 0.0,
+    "wind": 32.1,
+    "temp": 11.4,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "SLA-VIL": {
    "event": "401915293",
@@ -2719,7 +2793,15 @@
    "coords": [
     50.08804,
     14.42076
-   ]
+   ],
+   "rest_home": 20.9,
+   "rest_away": 3.2,
+   "weather": {
+    "precip": 0.4,
+    "wind": 10.1,
+    "temp": 5.1,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "ATM-VIK": {
    "event": "401915291",
@@ -2734,7 +2816,15 @@
    "coords": [
     40.4165,
     -3.70256
-   ]
+   ],
+   "rest_home": 3.0,
+   "rest_away": 4.3,
+   "weather": {
+    "precip": 0.0,
+    "wind": 9.0,
+    "temp": 7.9,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "BRU-LIV": {
    "event": "401915292",
@@ -2749,7 +2839,15 @@
    "coords": [
     51.20892,
     3.22424
-   ]
+   ],
+   "rest_home": 4.0,
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.1,
+    "wind": 28.2,
+    "temp": 9.9,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "INT-STU": {
    "event": "401915376",
@@ -2764,7 +2862,15 @@
    "coords": [
     42.78235,
     12.59836
-   ]
+   ],
+   "rest_home": 3.0,
+   "rest_away": 4.1,
+   "weather": {
+    "precip": 1.6,
+    "wind": 15.3,
+    "temp": 11.6,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "LIL-BAY": {
    "event": "401915377",
@@ -2796,7 +2902,15 @@
    "coords": [
     50.63391,
     3.05512
-   ]
+   ],
+   "rest_home": 4.0,
+   "rest_away": 5.0,
+   "weather": {
+    "precip": 0.0,
+    "wind": 29.1,
+    "temp": 10.0,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "PSG-ROM": {
    "event": "401915374",
@@ -2820,7 +2934,15 @@
    "coords": [
     48.85341,
     2.3488
-   ]
+   ],
+   "rest_home": 4.2,
+   "rest_away": 4.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 23.4,
+    "temp": 10.4,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "SHA-FEN": {
    "event": "401915375",
@@ -2860,7 +2982,15 @@
    "coords": [
     51.50853,
     -0.12574
-   ]
+   ],
+   "rest_home": 22.1,
+   "rest_away": 4.2,
+   "weather": {
+    "precip": 1.9,
+    "wind": 28.5,
+    "temp": 11.4,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "SCP-MUN": {
    "event": "401915373",
@@ -2892,7 +3022,15 @@
    "coords": [
     38.72509,
     -9.1498
-   ]
+   ],
+   "rest_home": 18.0,
+   "rest_away": 3.1,
+   "weather": {
+    "precip": 0.0,
+    "wind": 5.7,
+    "temp": 13.9,
+    "fetched": "2026-11-11 18:08"
+   }
   },
   "VIK-FEY": {
    "event": "401915290",
