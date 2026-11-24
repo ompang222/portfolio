@@ -1,37 +1,37 @@
 code,team_ko,opta_name,opta_rank,opta_rating
-PSG,파리 생제르맹,Paris Saint-Germain,3,97.65
-BAY,바이에른 뮌헨,Bayern München,2,99.78
-RMA,레알 마드리드,Real Madrid,6,96.41
-LIV,리버풀,Liverpool,8,95.12
-INT,인테르,Internazionale,9,94.04
-MCI,맨체스터 시티,Manchester City,5,97.03
+PSG,파리 생제르맹,Paris Saint-Germain,3,98.0
+BAY,바이에른 뮌헨,Bayern München,2,99.51
+RMA,레알 마드리드,Real Madrid,6,96.73
+LIV,리버풀,Liverpool,7,95.8
+INT,인테르,Internazionale,10,94.28
+MCI,맨체스터 시티,Manchester City,5,97.12
 ARS,아스널,Arsenal,1,100
-BAR,바르셀로나,Barcelona,4,97.52
-ATM,아틀레티코 마드리드,Atlético de Madrid,20,91.85
-BVB,도르트문트,Borussia Dortmund,14,92.67
-ROM,AS 로마,Roma,22,91.42
-SCP,스포르팅 CP,Sporting CP,24,91.28
-AVL,애스턴 빌라,Aston Villa,11,93.33
-POR,FC 포르투,Porto,28,90.97
-MUN,맨체스터 유나이티드,Manchester United,27,91.18
-BRU,클럽 브뤼헤,Club Brugge,15,92.28
-BET,레알 베티스,Real Betis,34,89.55
-PSV,PSV 에인트호번,PSV,37,89.31
-FEY,페예노르트,Feyenoord,74,86.31
-LIL,릴,Lille,54,87.85
-BOD,보되/글림트,Bodø / Glimt,32,89.85
-NAP,나폴리,Napoli,48,88.34
-RBL,RB 라이프치히,RB Leipzig,33,89.62
-VIL,비야레알,Villarreal,52,88.07
-FEN,페네르바흐체,Fenerbahçe,56,87.75
-SHA,샤흐타르 도네츠크,Shakhtar Donetsk,140,83.77
-GAL,갈라타사라이,Galatasaray,45,88.47
-SLA,슬라비아 프라하,Slavia Praha,51,88.28
-SLO,슬로반 브라티슬라바,Slovan Bratislava,338,80.01
-STU,슈투트가르트,Stuttgart,36,89.42
-AEK,AEK 아테네,AEK Athens,73,86.31
-LAS,LASK,LASK,122,84.32
-COM,코모,Como,17,92.17
-RCL,랑스,Lens,61,87.1
-VIK,바이킹,Viking,58,87.49
-SAB,사바,Sabah,188,82.64
+BAR,바르셀로나,Barcelona,4,97.87
+ATM,아틀레티코 마드리드,Atlético de Madrid,19,92.67
+BVB,도르트문트,Borussia Dortmund,12,93.27
+ROM,AS 로마,Roma,23,92.1
+SCP,스포르팅 CP,Sporting CP,26,91.46
+AVL,애스턴 빌라,Aston Villa,11,93.58
+POR,FC 포르투,Porto,28,91.05
+MUN,맨체스터 유나이티드,Manchester United,27,91.34
+BRU,클럽 브뤼헤,Club Brugge,14,92.95
+BET,레알 베티스,Real Betis,37,89.78
+PSV,PSV 에인트호번,PSV,34,90.2
+FEY,페예노르트,Feyenoord,84,86.26
+LIL,릴,Lille,56,88.07
+BOD,보되/글림트,Bodø / Glimt,31,90.75
+NAP,나폴리,Napoli,48,89.03
+RBL,RB 라이프치히,RB Leipzig,32,90.73
+VIL,비야레알,Villarreal,53,88.53
+FEN,페네르바흐체,Fenerbahçe,55,88.09
+SHA,샤흐타르 도네츠크,Shakhtar Donetsk,152,84.17
+GAL,갈라타사라이,Galatasaray,49,89.02
+SLA,슬라비아 프라하,Slavia Praha,45,89.13
+SLO,슬로반 브라티슬라바,Slovan Bratislava,323,81.0
+STU,슈투트가르트,Stuttgart,36,89.88
+AEK,AEK 아테네,AEK Athens,71,87.06
+LAS,LASK,LASK,115,85.11
+COM,코모,Como,20,92.6
+RCL,랑스,Lens,61,87.66
+VIK,바이킹,Viking,59,87.74
+SAB,사바,Sabah,172,83.62
